@@ -1,0 +1,78 @@
+﻿/*
+   ============================================================================
+   Project: Toolkit Angular
+   Name/Class:
+   Created On: 14/Oct/2015
+   Author: João Carreiro (joao.carreiro@cybermap.pt)
+   Company: Cybermap Lda.
+   Description:
+   ============================================================================
+*/
+
+/* HEADER */
+.entity-view .header {
+    padding: 8px;
+    margin-bottom:3px;
+}
+.entity-view .header h1,
+.entity-view .header h2,
+.entity-view .header h3,
+.entity-view .header h4,
+.entity-view .header h5,
+.entity-view .header h6 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+.entity-view .header .name {
+    text-transform:uppercase;
+}
+/* toolbar */
+.entity-view .toolbar,
+.entity-view .toolbar .btn,
+.entity-view .toolbar .input-group-addon,
+.entity-view .toolbar input,
+.entity-view .toolbar select {
+    border-color: #eAeAeA;
+}
+.entity-view .toolbar {
+    border-style:solid;
+    border-width:1px;
+    background-color:#FAFAFA;
+    padding: 8px;
+    margin-bottom: 3px;
+}
+.entity-view .toolbar .form-group {
+    margin-right: 3px;
+}
+.entity-view .toolbar .form-group:last-child {
+    margin-right:0;
+}
+/* layout: LIST */
+.entity-view .list img {
+    max-width: 48px;
+}
+.entity-view .list .list-group-item {
+    margin-bottom: 3px;
+    border-color: #eAeAeA;
+    padding:8px;
+}
+.entity-view .list .list-group-item .btn-toolbar {
+    margin-left: -3px;
+}
+.entity-view .list .list-group-item .btn-toolbar .btn-group {
+    margin-left: 3px;
+}
+.entity-view .list .list-group-item .btn-toolbar .btn {
+    border-color: #eAeAeA;
+}
+/* layout: GRID */
+.entity-view .grid .card {
+    margin:0;
+}
+.entity-view .grid .btn-toolbar .btn {
+    border-color: #eAeAeA;
+}
+/* layout: TABLE */
+.entity-view .table .btn-toolbar .btn {
+    border-color: #eAeAeA;
+}

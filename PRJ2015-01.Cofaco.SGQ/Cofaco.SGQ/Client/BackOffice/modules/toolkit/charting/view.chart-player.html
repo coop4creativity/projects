@@ -1,0 +1,25 @@
+﻿<!--
+   ============================================================================
+   Project: Toolkit Angular
+   Name/Class:
+   Created On: 14/Oct/2015
+   Author: João Carreiro (joao.carreiro@cybermap.pt)
+   Company: Cybermap Lda.
+   Description:
+   ============================================================================
+-->
+
+<div class="page">
+    <!-- HEADER -->
+    <div class="header">
+        <h3 class="name"><span data-ng-class="['glyphicon', 'glyphicon-' + 'signal']" aria-hidden="true"></span>&nbsp;{{ chart.name }}</h3>
+        <h5 class="name">{{ chart.description }}</h5>
+    </div>
+    <!-- /HEADER -->
+    <!-- CONTENT -->
+    <div class="row" data-ng-switch="layout">
+        <div class="col-md-12">
+            <div id="chart" style="width:100%;height:500px"></div>
+        </div>
+    </div>
+</div>

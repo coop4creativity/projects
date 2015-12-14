@@ -1,0 +1,57 @@
+﻿[
+    {
+        "filename": "schema.product.json",
+        "entity": "Toolkit.CMS: Toolkit.CMS.Model.Cluster",
+        "service": "Toolkit.CMS: Toolkit.CMS.Api.Interface.ICluster",
+        "method": {
+            "name": "Create",
+            "params": [ "Toolkit.CMS: Toolkit.CMS.Model.Cluster", "mscorlib: System.Object" ]
+        }
+    },
+    {
+        "filename": "schema.process.json",
+        "entity": "Toolkit.CMS: Toolkit.CMS.Model.Cluster",
+        "service": "Toolkit.CMS: Toolkit.CMS.Api.Interface.ICluster",
+        "method": {
+            "name": "Create",
+            "params": [ "Toolkit.CMS: Toolkit.CMS.Model.Cluster", "mscorlib: System.Object" ]
+        }
+    },
+    {
+        "filename": "schema.metadata.json",
+        "entity": "Toolkit.CMS: Toolkit.CMS.Model.Cluster",
+        "service": "Toolkit.CMS: Toolkit.CMS.Api.Interface.ICluster",
+        "method": {
+            "name": "Create",
+            "params": [ "Toolkit.CMS: Toolkit.CMS.Model.Cluster", "mscorlib: System.Object" ]
+        }
+    },
+    {
+        "filename": "data.users.json",
+        "entity": "Cofaco.SGQ: Cofaco.SGQ.Server.Model.Users.User",
+        "service": "Cofaco.SGQ: Cofaco.SGQ.Server.API.Interface.IUser",
+        "method": {
+            "name": "Create",
+            "params": [ "Cofaco.SGQ: Cofaco.SGQ.Server.Model.Users.User" ]
+        }
+    },
+    {
+        "filename": "data.navbar.json",
+        "entity": "Toolkit.IMS: Toolkit.IMS.Model.Menu",
+        "service": "Toolkit.IMS: Toolkit.IMS.Api.Interface.IMenu",
+        "method": {
+            "name": "Update",
+            "params": [ "Toolkit.IMS: Toolkit.IMS.Model.Menu", "mscorlib: System.Object" ]
+        }
+    },
+    {
+        "filename": "data.occ.json",
+        "entity": "Cofaco.SGQ: Cofaco.SGQ.Server.Temp.Occ",
+        "service": "Cofaco.SGQ: Cofaco.SGQ.Server.Temp.IOcc",
+        "method": {
+            "name": "Create",
+            "params": [ "Cofaco.SGQ: Cofaco.SGQ.Server.Temp.Occ", "mscorlib: System.Object" ]
+        }
+    }
+
+]

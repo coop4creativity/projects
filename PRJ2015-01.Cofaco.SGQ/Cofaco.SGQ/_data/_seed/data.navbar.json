@@ -1,0 +1,39 @@
+﻿[
+    {
+        "name": "navbar",
+        "items": [
+            {
+                "name": "Produto",
+                "style": "link",
+                "url": "#/entity/product"
+            },
+            {
+                "name": "Processo",
+                "style": "link",
+                "url": "#/entity/process"
+            },
+            {
+                "name": "Relatórios",
+                "style": "link",
+                "url": "#/entity/charts"
+            },
+            {
+                "name": "Utilizadores",
+                "style": "link",
+                "url": "#/entity/users"
+            },
+            {
+                "name": "${USER}",
+                "style": "link user",
+                "icon": "user",
+                "url": "#/profile"
+            },
+            {
+                "name": "Sair",
+                "icon": "log-out",
+                "style": "danger",
+                "action": "LOGOUT"
+            }
+        ]
+    }
+]

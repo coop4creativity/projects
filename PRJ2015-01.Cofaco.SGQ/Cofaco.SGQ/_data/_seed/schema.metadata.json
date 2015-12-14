@@ -1,0 +1,623 @@
+﻿[
+    {
+        "ref": "__metadata",
+        "name": "__METADATA",
+        "description": "Metadata cluster definition",
+        "contentTypes": [ ],
+        "entities": [
+            {
+                "ref": "__cluster",
+                "icon": "hdd",
+                "name": "Cluster",
+                "visibility": "UNKNOWN",
+                "description": "Cluster definition",
+                "api": {
+                    "create": "cmsddl/cluster-create",
+                    "detail": "cmsddl/cluster-get",
+                    "list": "cmsddl/cluster-list",
+                    "update": "",
+                    "delete": ""
+                },
+                "views": [
+                    {
+                        "name": "Todos os items",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "id",
+                                "displayName": "ID"
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome"
+                            }
+                        ]
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdDate",
+                                "displayName": "Criado em",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdBy",
+                                "displayName": "Criado por",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "ref",
+                                "displayName": "Referência",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": false,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ref": "__entity",
+                "icon": "hdd",
+                "name": "Entity",
+                "visibility": "UNKNOWN",
+                "description": "Entity definition",
+                "api": {
+                    "create": "cmsddl/entity-create",
+                    "detail": "/entity/{ID}",
+                    "list": "cmsddl/entity-list",
+                    "update": "",
+                    "delete": ""
+                },
+                "views": [
+                    {
+                        "name": "Completa",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "id",
+                                "displayName": "ID"
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome"
+                            }
+                        ]
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdDate",
+                                "displayName": "Criado em",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdBy",
+                                "displayName": "Criado por",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "ref",
+                                "displayName": "Referência",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "icon",
+                                "displayName": "Icon",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": false,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ref": "__view",
+                "icon": "hdd",
+                "name": "View",
+                "visibility": "UNKNOWN",
+                "description": "Entity view definition",
+                "api": {
+                    "create": "cmsddl/view-create",
+                    "detail": "cmsddl/view-get",
+                    "list": "cmsddl/view-list",
+                    "update": "",
+                    "delete": ""
+                },
+                "views": [
+                    {
+                        "name": "Completa",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "id",
+                                "displayName": "ID"
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome"
+                            }
+                        ]
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdDate",
+                                "displayName": "Criado em",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdBy",
+                                "displayName": "Criado por",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "ref",
+                                "displayName": "Referência",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": false,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ref": "__contentType",
+                "icon": "hdd",
+                "name": "Content Type",
+                "visibility": "UNKNOWN",
+                "description": "Content type definition",
+                "api": {
+                    "create": "cmsddl/ctype-create",
+                    "detail": "cmsddl/ctype-get",
+                    "list": "cmsddl/ctype-list",
+                    "update": "",
+                    "delete": ""
+                },
+                "views": [
+                    {
+                        "name": "Completa",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "id",
+                                "displayName": "ID"
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome"
+                            }
+                        ]
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdDate",
+                                "displayName": "Criado em",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdBy",
+                                "displayName": "Criado por",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "ref",
+                                "displayName": "Referência",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": false,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ref": "users",
+                "icon": "user",
+                "name": "Utilizadores",
+                "visibility": "UNKNOWN",
+                "description": "Gestão de Utilizadores",
+                "api": {
+                    "create": "user/create",
+                    "detail": "",
+                    "list": "user/get-list",
+                    "update": "user/update",
+                    "delete": "user/delete"
+                },
+                "views": [
+                    {
+                        "name": "Default",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "userName",
+                                "displayName": "Nome"
+                            },
+                            {
+                                "name": "type",
+                                "displayName": "Tipo"
+                            }
+                        ]
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "userName",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "password",
+                                "displayName": "Password",
+                                "description": "",
+                                "type": "PASSWORD",
+                                "required": false,
+                                "editable": true
+                            },
+                            {
+                                "name": "confirmPassword",
+                                "displayName": "Comfirmar",
+                                "description": "",
+                                "type": "PASSWORD",
+                                "required": false,
+                                "editable": true
+                            },
+                            {
+                                "name": "type",
+                                "displayName": "Tipo",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "CREATE",
+                        "properties": [
+                            {
+                                "name": "userName",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "password",
+                                "displayName": "Password",
+                                "description": "",
+                                "type": "PASSWORD",
+                                "required": false,
+                                "editable": true
+                            },
+                            {
+                                "name": "confirmPassword",
+                                "displayName": "Comfirmar",
+                                "description": "",
+                                "type": "PASSWORD",
+                                "required": false,
+                                "editable": true
+                            },
+                            {
+                                "name": "type",
+                                "displayName": "Tipo",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "VIEW",
+                        "properties": [
+                            {
+                                "name": "userName",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "type",
+                                "displayName": "Tipo",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EDIT",
+                        "properties": [
+                            {
+                                "name": "userName",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "type",
+                                "displayName": "Tipo",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ref": "charts",
+                "icon": "hdd",
+                "name": "Gráficos",
+                "visibility": "UNKNOWN",
+                "description": "Gestão de Graficos",
+                "api": {
+                    "create": "chart/create",
+                    "detail": "chart/get",
+                    "list": "chart/list",
+                    "update": "chart/update",
+                    "delete": "chart/delete"
+                },
+                "views": [
+                    {
+                        "name": "Nome",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "name",
+                                "displayName": "Nome"
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição"
+                            }
+                        ]
+                    }
+                ],
+                "forms": [
+                    {
+                        "type": "CREATE",
+                        "url": "/chart-build"
+                    },                                        
+                    {
+                        "type": "VIEW",
+                        "url": "/chart-play/{ID}"
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdDate",
+                                "displayName": "Criado em",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdBy",
+                                "displayName": "Criado por",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": false,
+                                "editable": true
+                            },
+                            {
+                                "name": "type",
+                                "displayName": "Tipo",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": false,
+                                "editable": true
+                            },
+                            {
+                                "name": "url",
+                                "displayName": "Url",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": false,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

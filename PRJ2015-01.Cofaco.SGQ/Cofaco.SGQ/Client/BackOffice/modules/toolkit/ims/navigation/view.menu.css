@@ -1,0 +1,66 @@
+﻿/*
+   ============================================================================
+   Project: Toolkit Angular
+   Name/Class:
+   Created On: 14/Oct/2015
+   Author: João Carreiro (joao.carreiro@cybermap.pt)
+   Company: Cybermap Lda.
+   Description:
+   ============================================================================
+*/
+
+/* navigation bars. */
+.navbar * {
+    color: white;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.navbar a:hover,
+.navbar a:link,
+.navbar a:visited {
+    background-color:transparent;
+    color:white;
+    text-decoration:none;
+}
+.navbar-background {
+    background-color: #1D365E;
+    background-image: -moz-linear-gradient(top, #333333, #262626);
+    background-image: -o-linear-gradient(top, #333333, #262626);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff262626', GradientType=0);
+}
+.navbar-header {
+    padding-left:8px;
+}
+.navbar-header .navbar-text {
+    margin-left: 0;
+    text-transform:uppercase;
+}
+/* main menu buttons */
+.navbar .main-menu {
+    text-transform:uppercase;
+    margin-right:0px;
+    padding-right:8px;
+}
+.navbar .main-menu .active {
+    background-color:dodgerblue;
+    text-decoration:none;   
+}
+.navbar .main-menu .user {
+    text-transform:lowercase;
+}
+.navbar .main-menu .btn:hover {
+    text-decoration:none;
+}
+.navbar .main-menu .badge {  
+    font-size: 10px;
+    background: red;
+    color: white;
+    top: -12px;    
+    left:-10px;  
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    border-radius: 10px !important;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}

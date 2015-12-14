@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63FFC8AF-BB9E-4425-BE01-51CF344A33AC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cofaco.SGQ</RootNamespace>
+    <AssemblyName>Cofaco.SGQ</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44305</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotLiquid, Version=1.8.0.0, Culture=neutral, PublicKeyToken=82e46016ecf9f07c, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotLiquid.1.8.0\lib\NET45\DotLiquid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_PUBLISHED\Debug\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_PUBLISHED\Debug\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Toolkit.Apps.Web.Framework">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Apps.Web.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.AppServer">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.AppServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Auth">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Blocks">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Blocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Blocks.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Blocks.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Charting">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Charting.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Charting.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.CMS">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.CMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.CodeBase">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.CodeBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Comm">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Comm.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.CommonResources">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.CommonResources.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Data">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Data.Context">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Data.Context.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Data.EntityFramework">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Data.FileSystem">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Data.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Data.Mongo">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Data.Mongo.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Data.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Data.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Designer">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Drawing">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Drawing.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Drawing.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.eDocLinkIntegrator">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.eDocLinkIntegrator.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Elections">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Elections.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Features">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.FileSystem">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Forms">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Forms.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Forms.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Framework">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Framework.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Framework.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.IMS">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.IMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Localization">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Logging">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Maps">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Maps.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Maps.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Models">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Models.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Models.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Packages">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Packages.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Pages">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Pages.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Reporting">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Reporting.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Reporting.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.RequestQueue">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.RequestQueue.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Resources">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Runtime">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Runtime.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Runtime.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Scripting">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Scripting.Janua">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Scripting.Janua.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Scripting.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Scripting.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Search">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Search.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Search.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Snippets">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Snippets.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Storage">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Ticker">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Ticker.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.UMS">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.UMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Utils">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Watcher">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Watcher.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolkit.Web">
+      <HintPath>..\..\..\..\..\TFS\Components\Toolkit\_PUBLISHED\Debug\Toolkit.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Client\BackOffice\main\a_boot.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\auth\auth.interceptor.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\auth\auth.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\charting\controller.chart-player.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\charting\controller.chart-builder.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\charting\view.chart-player.html" />
+    <Content Include="Client\BackOffice\modules\toolkit\charting\view.chart-builder.html" />
+    <Content Include="Client\BackOffice\modules\toolkit\charting\view.chart-builder.css" />
+    <Content Include="Client\BackOffice\modules\toolkit\cms\service.entity.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\cms\service.dal.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\cms\service.ddl.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\comm\service.comm.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\ims\navigation\controller.menu.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\ims\navigation\service.menu.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\ims\navigation\view.menu.css" />
+    <Content Include="Client\BackOffice\modules\toolkit\localization\service.locale.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\localization\service.resx.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\logging\service.log.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\config\runtime.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\ui\modal.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\ums\controller.login.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\ums\controller.profile.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\ums\view.profile.css" />
+    <Content Include="Client\BackOffice\modules\toolkit\_modules.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\cms\view.entity.css" />
+    <Content Include="Client\BackOffice\modules\toolkit\cms\controller.entity.js" />
+    <Content Include="Client\BackOffice\main\view.home.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\core\filter.picker.js" />
+    <Content Include="Client\BackOffice\index.aspx" />
+    <Content Include="Client\BackOffice\modules\toolkit\cms\service.config.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\core\service.error.js" />
+    <Content Include="Client\BackOffice\main\admin.css" />
+    <Content Include="Client\BackOffice\modules\3party\angular-vertilize.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\ums\view.login.css" />
+    <Content Include="Client\BackOffice\support\dropzone.css" />
+    <Content Include="Client\BackOffice\support\dropzone.js" />
+    <Content Include="Client\BackOffice\support\form.css" />
+    <Content Include="Client\BackOffice\support\form.js" />
+    <Content Include="Client\BackOffice\support\popup.js" />
+    <Content Include="Client\BackOffice\support\upload.css" />
+    <Content Include="Client\BackOffice\support\upload.js" />
+    <Content Include="Client\BackOffice\modules\toolkit\ums\view.login.html" />
+    <Content Include="Client\BackOffice\modules\toolkit\cms\view.entity.html" />
+    <Content Include="Client\BackOffice\main\view.home.html" />
+    <Content Include="Client\BackOffice\modules\toolkit\ums\view.profile.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_config\assemblies.config" />
+    <Content Include="_config\localization.config" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\LOCALE-FILESYSTEM.pubxml" />
+    <None Include="Web.Deploy [DEBUG].config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Deploy [RELEASE].config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="_config\routing.config" />
+    <Content Include="_config\pages-routing.config" />
+    <Content Include="_config\handlers.config" />
+    <Content Include="_config\services-app.config" />
+    <Content Include="_config\services-cms.config" />
+    <Content Include="_config\services-comm.config" />
+    <Content Include="_config\tokens.config" />
+    <Content Include="_data\_images\logo-simple.jpg" />
+    <Content Include="_data\_images\logo.jpg" />
+    <Content Include="_data\_images\_icon\android-icon-144x144.png" />
+    <Content Include="_data\_images\_icon\android-icon-192x192.png" />
+    <Content Include="_data\_images\_icon\android-icon-36x36.png" />
+    <Content Include="_data\_images\_icon\android-icon-48x48.png" />
+    <Content Include="_data\_images\_icon\android-icon-72x72.png" />
+    <Content Include="_data\_images\_icon\android-icon-96x96.png" />
+    <Content Include="_data\_images\_icon\apple-icon-114x114.png" />
+    <Content Include="_data\_images\_icon\apple-icon-120x120.png" />
+    <Content Include="_data\_images\_icon\apple-icon-144x144.png" />
+    <Content Include="_data\_images\_icon\apple-icon-152x152.png" />
+    <Content Include="_data\_images\_icon\apple-icon-180x180.png" />
+    <Content Include="_data\_images\_icon\apple-icon-57x57.png" />
+    <Content Include="_data\_images\_icon\apple-icon-60x60.png" />
+    <Content Include="_data\_images\_icon\apple-icon-72x72.png" />
+    <Content Include="_data\_images\_icon\apple-icon-76x76.png" />
+    <Content Include="_data\_images\_icon\apple-icon-precomposed.png" />
+    <Content Include="_data\_images\_icon\apple-icon.png" />
+    <Content Include="_data\_images\_icon\browserconfig.xml" />
+    <Content Include="_data\_images\_icon\favicon-16x16.png" />
+    <Content Include="_data\_images\_icon\favicon-32x32.png" />
+    <Content Include="_data\_images\_icon\favicon-96x96.png" />
+    <Content Include="_data\_images\_icon\favicon.ico" />
+    <Content Include="_data\_images\_icon\ms-icon-144x144.png" />
+    <Content Include="_data\_images\_icon\ms-icon-150x150.png" />
+    <Content Include="_data\_images\_icon\ms-icon-310x310.png" />
+    <Content Include="_data\_images\_icon\ms-icon-70x70.png" />
+    <Content Include="_data\_seed\schema.product.json" />
+    <Content Include="_config\services-logging.config" />
+    <Content Include="_config\services-ticker.config" />
+    <Content Include="_config\services-localization.config" />
+    <Content Include="_config\services-ims.config" />
+    <Content Include="_config\services-init.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_data\_seed\_seed.json" />
+    <Content Include="_data\_seed\data.users.json" />
+    <Content Include="_data\_seed\schema.metadata.json" />
+    <Content Include="_data\_seed\schema.process.json" />
+    <Content Include="_data\_images\_icon\manifest.json" />
+    <Content Include="_data\_seed\data.navbar.json" />
+    <Content Include="_data\_seed\schema.process-COMPLETE.json" />
+    <Content Include="_data\_seed\data.occ.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\API\Controllers\ChartController.cs" />
+    <Compile Include="Server\API\Controllers\AController.cs" />
+    <Compile Include="Server\API\Controllers\StatsController.cs" />
+    <Compile Include="Server\API\Controllers\UserController.cs" />
+    <Compile Include="Server\API\Default\SrvChart.cs" />
+    <Compile Include="Server\API\Default\SrvStats.cs" />
+    <Compile Include="Server\API\Default\SrvUser.cs" />
+    <Compile Include="Server\API\Interface\IChart.cs" />
+    <Compile Include="Server\API\Interface\IStats.cs" />
+    <Compile Include="Server\API\Interface\IUser.cs" />
+    <Compile Include="Server\Auth\Authorize.cs" />
+    <Compile Include="Server\Auth\AuthServerProvider.cs" />
+    <Compile Include="Server\Data\EF\Common.cs" />
+    <Compile Include="Server\Data\EF\DataContext.cs" />
+    <Compile Include="Server\Data\EF\DataContextInitializer.cs" />
+    <Compile Include="Server\Data\EF\NewDALHandler.cs" />
+    <Compile Include="Server\Data\EF\ObjSrcStringBase.cs" />
+    <Compile Include="Server\Data\EF\ObjSrcBase.cs" />
+    <Compile Include="Server\Data\EF\ObjSrcUser.cs" />
+    <Compile Include="Server\Data\EF\UserAsIdentityUser.cs" />
+    <Compile Include="Server\Model\Charting\Chart.cs" />
+    <Compile Include="Server\Model\Support\Stats.cs" />
+    <Compile Include="Server\Model\Users\User.cs" />
+    <Compile Include="Server\Model\Users\_Enums.cs" />
+    <Compile Include="Server\Start\Startup.cs" />
+    <Compile Include="Server\__TEMP\Occ.cs" />
+    <Compile Include="Server\__TEMP\UNAMED.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_config\app.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_config\services-framework.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Client\BackOffice\modules\toolkit\blocks\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\filesystem\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\forms\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\hqueue\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\ims\components\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\ims\pages\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\ims\templates\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\maps\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\packages\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\search\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\ticker\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\types\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\watcher\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\webapi\" />
+    <Folder Include="Client\BackOffice\modules\toolkit\webscript\" />
+    <Folder Include="Client\FrontOffice\" />
+    <Folder Include="Server\Model\Process\" />
+    <Folder Include="_data\_db\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Deploy [DEBUG]|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Deploy [RELEASE]|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65343</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50001</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

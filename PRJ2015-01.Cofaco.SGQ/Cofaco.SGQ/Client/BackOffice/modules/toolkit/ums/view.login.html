@@ -1,0 +1,61 @@
+﻿<!--
+   ============================================================================
+   Project: Toolkit Angular
+   Name/Class:
+   Created On: 14/Oct/2015
+   Author: João Carreiro (joao.carreiro@cybermap.pt)
+   Company: Cybermap Lda.
+   Description:
+   ============================================================================
+-->
+
+<div class="tk-view-login">
+    <div class="form-signin" role="form">
+        <!-- LOGO -->
+        <div class="logo" data-ng-show="resource.logoUrl != ''">
+            <img class="image" data-ng-src="{{ config.resource.logoUrl | tkResolveUrl }}" />
+        </div>
+        <!-- TITLE -->
+        <div class="heading" data-ng-show="config.resource.title != ''">
+            <h2 class="text-center" data-ng-show="config.resource.title != ''">{{ config.resource.title }}</h2>
+            <h3 class="text-center" data-ng-show="config.resource.description != ''">{{ config.resource.description }}</h3>
+        </div>
+        <!-- USERNAME -->
+        <div class="form-group">
+            <label for="login" class="sr-only">{{ config.resource.userName }}</label>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" id="login" data-tk-enter="login()" data-ng-disabled="!verified" class="form-control" placeholder="{{ config.resource.userName }}" required="" autofocus="" data-ng-model="loginData.userName">
+            </div>
+        </div>
+        <!-- PASSWORD -->
+        <div class="form-group">
+            <label for="password" class="sr-only">{{ config.resource.password }}</label>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="password" id="password" data-tk-enter="login()" data-ng-disabled="!verified" class=" form-control" placeholder="{{ config.resource.password }}" required="" data-ng-model="loginData.password">
+            </div>
+        </div>
+        <!-- KEEP SESSION -->
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" data-ng-disabled="!verified" value="remember-me" data-ng-model="loginData.rememberMe">&nbsp;{{ config.resource.rememberMe }}
+            </label>
+        </div>
+        <!-- SUBMIT LOGIN BUTTON -->
+        <button class="btn btn-lg btn-primary btn-block" data-ng-disabled="!verified" type="button" data-ng-click="login()">{{ config.resource.submit }}</button>
+        <!-- MESSAGES -->
+        <div data-ng-show="errMessage != ''">
+            <br />
+            <div class="alert alert-danger">
+                {{ errMessage }}
+            </div>
+        </div>
+        <div data-ng-show="wrnMessage != ''">
+            <br />
+            <div class="alert alert-warning">
+                {{ wrnMessage }}
+            </div>
+        </div>
+    </div>
+</div>

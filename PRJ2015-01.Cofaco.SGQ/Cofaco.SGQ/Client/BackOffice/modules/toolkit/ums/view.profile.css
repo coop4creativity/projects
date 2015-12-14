@@ -1,0 +1,34 @@
+﻿/*
+   ============================================================================
+   Project: Toolkit Angular
+   Name/Class:
+   Created On: 14/Oct/2015
+   Author: João Carreiro (joao.carreiro@cybermap.pt)
+   Company: Cybermap Lda.
+   Description:
+   ============================================================================
+*/
+
+/* HEADER */
+.profile-view .header {
+    padding: 8px;
+    margin-bottom:3px;
+}
+.profile-view .header h1,
+.profile-view .header h2,
+.profile-view .header h3,
+.profile-view .header h4,
+.profile-view .header h5,
+.profile-view .header h6,
+.profile-view .header .h1,
+.profile-view .header .h2,
+.profile-view .header .h3,
+.profile-view .header .h4,
+.profile-view .header .h5,
+.profile-view .header .h6 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+.profile-view .header .name {
+    text-transform:uppercase;
+}

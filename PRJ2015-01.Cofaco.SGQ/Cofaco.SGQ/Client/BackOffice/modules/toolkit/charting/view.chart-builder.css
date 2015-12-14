@@ -1,0 +1,49 @@
+﻿/*
+   ============================================================================
+   Project: Toolkit Angular
+   Name/Class:
+   Created On: 14/Oct/2015
+   Author: João Carreiro (joao.carreiro@cybermap.pt)
+   Company: Cybermap Lda.
+   Description:
+   ============================================================================
+*/
+
+/* HEADER */
+.chart-builder-view .header {
+    padding: 8px;
+    margin-bottom:3px;
+}
+.chart-builder-view .header h1,
+.chart-builder-view .header h2,
+.chart-builder-view .header h3,
+.chart-builder-view .header h4,
+.chart-builder-view .header h5,
+.chart-builder-view .header h6 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+.chart-builder-view .header .name {
+    text-transform:uppercase;
+}
+/* toolbar */
+.chart-builder-view .toolbar,
+.chart-builder-view .toolbar .btn,
+.chart-builder-view .toolbar .input-group-addon,
+.chart-builder-view .toolbar input,
+.chart-builder-view .toolbar select {
+    border-color: #eAeAeA;
+}
+.chart-builder-view .toolbar {
+    border-style:solid;
+    border-width:1px;
+    background-color:#FAFAFA;
+    padding: 8px;
+    margin-bottom: 3px;
+}
+.chart-builder-view .toolbar .form-group {
+    margin-right: 3px;
+}
+.chart-builder-view .toolbar .form-group:last-child {
+    margin-right:0;
+}

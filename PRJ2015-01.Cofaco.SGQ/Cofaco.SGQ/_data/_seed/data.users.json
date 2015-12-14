@@ -1,0 +1,26 @@
+﻿[
+    {
+        "userName": "admin",
+        "password": "Password$123",
+        "confirmPassword": "Password$123",
+        "type": "ADMIN"
+    },
+    {
+        "userName": "supervisor",
+        "password": "Password$123",
+        "confirmPassword": "Password$123",
+        "type": "SUPERVISOR"
+    },
+    {
+        "userName": "responsavel",
+        "password": "Password$123",
+        "confirmPassword": "Password$123",
+        "type": "RESPONSIBLE"
+    },
+    {
+        "userName": "operador",
+        "password": "Password$123",
+        "confirmPassword": "Password$123",
+        "type": "OPERATOR"
+    }
+]

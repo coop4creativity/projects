@@ -1,0 +1,241 @@
+﻿[
+    {
+        "ref": "processo",
+        "name": "Processo",
+        "description": "Controlo do Processo de Fabrico",
+        "contentTypes": [ ],
+        "entities": [
+            {
+                "ref": "process",
+                "icon": "hdd",
+                "name": "Processo",
+                "description": "Gestão de Processo",
+                "visibility": "UNKNOWN",
+                "api": {
+                    "create": "",
+                    "detail": "",
+                    "list": "cmsddl/entity-list-by-cluster/processo",
+                    "update": "",
+                    "delete": ""
+                },
+                "views": [
+                    {
+                        "name": "Default",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "name",
+                                "displayName": "Nome"
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição"
+                            }
+                        ]
+                    }
+                ],
+                "forms": [
+                    {
+                        "type": "VIEW",
+                        "url": "/entity/{ID}"
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdDate",
+                                "displayName": "Criado em",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdBy",
+                                "displayName": "Criado por",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "ref",
+                                "displayName": "Referência",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "icon",
+                                "displayName": "Icon",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": false,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ref": "occ",
+                "icon": "hdd",
+                "name": "Occurência",
+                "description": "Mapa de Occorência",
+                "api": {
+                    "create": "occ/create",
+                    "detail": "occ/get",
+                    "list": "occ/list",
+                    "update": "occ/update",
+                    "delete": "occ/delete"
+                },
+                "views": [
+                    {
+                        "name": "Nome",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "timeStamp",
+                                "displayName": "Data"
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição"
+                            },
+                            {
+                                "name": "number",
+                                "displayName": "Número"
+                            }
+                        ]
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "timeStamp",
+                                "displayName": "Data",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": false,
+                                "editable": true
+                            },
+                            {
+                                "name": "number",
+                                "displayName": "Numero",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": false,
+                                "editable": true
+                            }
+                        ]
+                    },                                     
+                    {
+                        "type": "CREATE",
+                        "properties": [
+                            {
+                                "name": "timeStamp",
+                                "displayName": "Data",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "number",
+                                "displayName": "Numero",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": true
+                            }
+                        ]
+                    },                                     
+                    {
+                        "type": "EDIT",
+                        "properties": [
+                            {
+                                "name": "timeStamp",
+                                "displayName": "Data",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "number",
+                                "displayName": "Numero",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
