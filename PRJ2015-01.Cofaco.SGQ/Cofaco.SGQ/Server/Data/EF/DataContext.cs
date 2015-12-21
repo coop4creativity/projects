@@ -44,14 +44,6 @@ namespace Cofaco.SGQ.Server.Data.EF
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //
-            // SAMPLES
-            //
-
-            modelBuilder.Entity<Temp.Occ>()
-                .ToTable("TEMP_OCC")
-                .HasKey(t => t.ID);
-
-            //
             // STORE
             //
 

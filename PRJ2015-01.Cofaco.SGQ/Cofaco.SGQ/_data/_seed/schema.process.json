@@ -111,11 +111,11 @@
                 "name": "Occurência",
                 "description": "Mapa de Occorência",
                 "api": {
-                    "create": "occ/create",
-                    "detail": "occ/get",
-                    "list": "occ/list",
-                    "update": "occ/update",
-                    "delete": "occ/delete"
+                    "create": "store/create/occ",
+                    "detail": "store/get/occ",
+                    "list": "store/list/occ",
+                    "update": "store/update/occ",
+                    "delete": "store/delete/occ"
                 },
                 "views": [
                     {

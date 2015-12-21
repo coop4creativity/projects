@@ -459,8 +459,6 @@
     <Compile Include="Server\Model\Users\User.cs" />
     <Compile Include="Server\Model\Users\_Enums.cs" />
     <Compile Include="Server\Start\Startup.cs" />
-    <Compile Include="Server\__TEMP\Occ.cs" />
-    <Compile Include="Server\__TEMP\UNAMED.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="_config\app.config">

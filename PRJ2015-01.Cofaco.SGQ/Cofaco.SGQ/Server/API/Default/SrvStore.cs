@@ -101,14 +101,48 @@ namespace Cofaco.SGQ.Server.API.Default
 
         private Value _Item2Value(Item item)
         {
-            Value val = default(Value);
+            Value val = new Value();
+
+            //
+            // Specific properties.
+            //
+
+            val = Toolkit.Apps.Web.Framework.Utils.WSReader.ReadJSONObjectFromString<Value>(item.Properties);
+
+            //
+            // Common properties.
+            //
+
+            val.ID = item.ID;
+            val.CreatedDate = item.CreatedDate;
+            val.ModifiedDate = item.ModifiedDate;
+            val.CreatedBy = item.CreatedBy;
+            val.ModifiedBy = item.ModifiedBy;
+
             return val;
         }
 
         private Item _Value2Item(Value val, string entity)
         {
-            Item item = default(Item);
+            Item item = new Item();
+            
+            //
+            // Common properties.
+            //
+
+            item.ID = val.ID;
+            item.CreatedDate = val.CreatedDate;
+            item.ModifiedDate = val.ModifiedDate;
+            item.CreatedBy = val.CreatedBy;
+            item.ModifiedBy = val.ModifiedBy;
+
+            //
+            // Specific properties.
+            //
+
             item.Entity = entity;
+            item.Properties = Toolkit.Apps.Web.Framework.Utils.WSReader.WriteJSONObject(val);
+
             return item;
         }
     }

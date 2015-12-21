@@ -43,15 +43,5 @@
             "name": "Update",
             "params": [ "Toolkit.IMS: Toolkit.IMS.Model.Menu", "mscorlib: System.Object" ]
         }
-    },
-    {
-        "filename": "data.occ.json",
-        "entity": "Cofaco.SGQ: Cofaco.SGQ.Server.Temp.Occ",
-        "service": "Cofaco.SGQ: Cofaco.SGQ.Server.Temp.IOcc",
-        "method": {
-            "name": "Create",
-            "params": [ "Cofaco.SGQ: Cofaco.SGQ.Server.Temp.Occ", "mscorlib: System.Object" ]
-        }
     }
-
 ]
