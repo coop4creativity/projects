@@ -47,8 +47,16 @@ namespace Cofaco.SGQ.Server.Data.EF
             // SAMPLES
             //
 
-            modelBuilder.Entity<Server.Temp.Occ>()
+            modelBuilder.Entity<Temp.Occ>()
                 .ToTable("TEMP_OCC")
+                .HasKey(t => t.ID);
+
+            //
+            // STORE
+            //
+
+            modelBuilder.Entity<Model.Process.Item>()
+                .ToTable("ITEM")
                 .HasKey(t => t.ID);
 
             //

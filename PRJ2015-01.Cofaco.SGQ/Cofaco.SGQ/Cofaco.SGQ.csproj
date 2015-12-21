@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -425,13 +426,19 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\API\Controllers\StoreController.cs" />
+    <Compile Include="Server\API\Controllers\ItemController.cs" />
     <Compile Include="Server\API\Controllers\ChartController.cs" />
     <Compile Include="Server\API\Controllers\AController.cs" />
     <Compile Include="Server\API\Controllers\StatsController.cs" />
     <Compile Include="Server\API\Controllers\UserController.cs" />
+    <Compile Include="Server\API\Default\SrvStore.cs" />
+    <Compile Include="Server\API\Default\SrvItem.cs" />
     <Compile Include="Server\API\Default\SrvChart.cs" />
     <Compile Include="Server\API\Default\SrvStats.cs" />
     <Compile Include="Server\API\Default\SrvUser.cs" />
+    <Compile Include="Server\API\Interface\IStore.cs" />
+    <Compile Include="Server\API\Interface\IItem.cs" />
     <Compile Include="Server\API\Interface\IChart.cs" />
     <Compile Include="Server\API\Interface\IStats.cs" />
     <Compile Include="Server\API\Interface\IUser.cs" />
@@ -446,6 +453,8 @@
     <Compile Include="Server\Data\EF\ObjSrcUser.cs" />
     <Compile Include="Server\Data\EF\UserAsIdentityUser.cs" />
     <Compile Include="Server\Model\Charting\Chart.cs" />
+    <Compile Include="Server\Model\Process\Value.cs" />
+    <Compile Include="Server\Model\Process\Item.cs" />
     <Compile Include="Server\Model\Support\Stats.cs" />
     <Compile Include="Server\Model\Users\User.cs" />
     <Compile Include="Server\Model\Users\_Enums.cs" />
@@ -484,7 +493,6 @@
     <Folder Include="Client\BackOffice\modules\toolkit\webapi\" />
     <Folder Include="Client\BackOffice\modules\toolkit\webscript\" />
     <Folder Include="Client\FrontOffice\" />
-    <Folder Include="Server\Model\Process\" />
     <Folder Include="_data\_db\" />
   </ItemGroup>
   <PropertyGroup>

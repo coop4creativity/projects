@@ -6,7 +6,7 @@
     font-family: "Oswald", Arial;
 }
 body {
-    background-color: #fff;
+    background-color: #eee;
     padding-top:51px;
     overflow-y:scroll;
 }
@@ -46,7 +46,6 @@ hr { border-bottom: 1px solid silver; }
     padding-bottom:10px;
     margin-bottom:20px;
 }
-/**/
 /* HEADER */
 .page .header {
     padding: 8px;
