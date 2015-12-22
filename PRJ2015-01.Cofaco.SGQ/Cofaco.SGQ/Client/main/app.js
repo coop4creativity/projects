@@ -26,8 +26,8 @@ var appSpec = {
     //
 
     baseUrls: [
-        'APP', '~/Client/BackOffice/',
-        'MAIN', '~/Client/BackOffice/main/',
+        'APP', __PATH,
+        'MAIN', '[APP]:~/main/',
         'VIEWS', '[MAIN]:~/',
         'SUPPORT', '[APP]:~/support/',
         'CMS', '[APP]:~/modules/toolkit/cms/',
@@ -158,7 +158,7 @@ app.run(['$rootScope', '$location', 'tkAuthService', function ($rootScope, $loca
     });
 
     //
-    // Save previoues page.
+    // Save previous page.
     // 
 
     $rootScope.$on('$routeChangeSuccess', function (event, currentRoute, previousRoute) {
@@ -175,15 +175,23 @@ app.run(['$rootScope', '$location', 'tkAuthService', function ($rootScope, $loca
 
         if ($rootScope.previousPage != null || $rootScope.previousPage != undefined) {
 
-            if (e != null) { e.preventDefault(); }
+            if (e != null) {
+                e.preventDefault();
+            }
+
             window.history.back();
             return true;
-        } else if (e != null) {
+        }
+        else if (e != null) {
 
             return true;
-        } else {
+        }
+        else {
 
-            if (e != null) { e.preventDefault(); }
+            if (e != null) {
+                e.preventDefault();
+            }
+
             return false;
         }
     };

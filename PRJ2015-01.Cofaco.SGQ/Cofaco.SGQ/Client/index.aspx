@@ -33,7 +33,7 @@
     <framework:Package runat="server" Name="3party:angular" Mode="HERE" MimeType="text/css" />
     <framework:Package runat="server" Name="3party:bootstrap:334" Mode="HERE" MimeType="text/css" />
     <framework:Package runat="server" Name="3party:angular" Mode="HERE" MimeType="text/css" />
-    <framework:StyleIncludeFolder runat="server" Folder="~/Client/BackOffice" Pattern="*.css" Mode="HERE" Recursive="true" />
+    <framework:StyleIncludeFolder runat="server" Folder="~/Client" Pattern="*.css" Mode="HERE" Recursive="true" />
     <!--[if lt IE 9]>
     <framework:Package runat="server" Name="3party:html5" Mode="HERE" MimeType="application/javascript" />
     <![endif]-->
@@ -89,15 +89,16 @@
         var __NAME = '<%= Ctx.AppContext.Config.Name %>';
         var __DESCRIPTION = '<%= Ctx.AppContext.Config.Description %>';
         var __ICON = '<%= Ctx.AppContext.Config.IconUrl %>';
+        var __PATH = '<%= Ctx.Resolver.ResolveUrl("~/Client/") %>';
     </script>
     <!-- TOOLKIT ANGULAR -->
     <framework:Package runat="server" Name="toolkit:angular:core" Mode="HERE" MimeType="application/javascript" />
     <framework:Package runat="server" Name="toolkit:angular:auth" Mode="HERE" MimeType="application/javascript" />
     <framework:Package runat="server" Name="toolkit:angular:models" Mode="HERE" MimeType="application/javascript" />
     <!-- ANGULAR COMPONENTS -->
-    <framework:ScriptIncludeFolder runat="server" Folder="~/Client/BackOffice/support" Pattern="*.js" Mode="HERE" />
-    <framework:ScriptIncludeFolder runat="server" Folder="~/Client/BackOffice/modules" Pattern="*.js" Mode="HERE" Recursive="true" />
-    <framework:ScriptIncludeFolder runat="server" Folder="~/Client/BackOffice/main" Pattern="*.js" Mode="HERE" />
+    <framework:ScriptIncludeFolder runat="server" Folder="~/Client/support" Pattern="*.js" Mode="HERE" />
+    <framework:ScriptIncludeFolder runat="server" Folder="~/Client/modules" Pattern="*.js" Mode="HERE" Recursive="true" />
+    <framework:ScriptIncludeFolder runat="server" Folder="~/Client/main" Pattern="*.js" Mode="HERE" />
 </body>
 </html>
 

@@ -9,7 +9,7 @@
    ============================================================================
 */
 
-/* HEADER */
+/* header */
 .entity-view .header {
     padding: 8px;
     margin-bottom:3px;
@@ -32,12 +32,12 @@
 .entity-view .toolbar .input-group-addon,
 .entity-view .toolbar input,
 .entity-view .toolbar select {
-    border-color: #eAeAeA;
+    border-color: #ddd;
 }
 .entity-view .toolbar {
     border-style:solid;
     border-width:1px;
-    background-color:#FAFAFA;
+    background-color:#fff;
     padding: 8px;
     margin-bottom: 3px;
 }
@@ -53,7 +53,7 @@
 }
 .entity-view .list .list-group-item {
     margin-bottom: 3px;
-    border-color: #eAeAeA;
+    border-color: #ddd;
     padding:8px;
 }
 .entity-view .list .list-group-item .btn-toolbar {
@@ -63,7 +63,7 @@
     margin-left: 3px;
 }
 .entity-view .list .list-group-item .btn-toolbar .btn {
-    border-color: #eAeAeA;
+    border-color: #ddd;
 }
 /* layout: GRID */
 .entity-view .grid .card {
@@ -73,6 +73,9 @@
     border-color: #eAeAeA;
 }
 /* layout: TABLE */
+.entity-view .table {
+    background-color:#fff;
+}
 .entity-view .table .btn-toolbar .btn {
     border-color: #eAeAeA;
 }
