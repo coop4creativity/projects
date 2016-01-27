@@ -359,8 +359,8 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="_config\assemblies.config" />
-    <Content Include="_config\localization.config" />
+    <Content Include="assemblies.config" />
+    <Content Include="localization.config" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\LOCALE-FILESYSTEM.pubxml" />
     <None Include="Web.Deploy [DEBUG].config">
@@ -369,57 +369,56 @@
     <None Include="Web.Deploy [RELEASE].config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="_config\routing.config" />
-    <Content Include="_config\pages-routing.config" />
-    <Content Include="_config\handlers.config" />
-    <Content Include="_config\services-app.config" />
-    <Content Include="_config\services-cms.config" />
-    <Content Include="_config\services-comm.config" />
-    <Content Include="_config\tokens.config" />
-    <Content Include="_data\_images\logo-simple.jpg" />
-    <Content Include="_data\_images\logo.jpg" />
-    <Content Include="_data\_images\_icon\android-icon-144x144.png" />
-    <Content Include="_data\_images\_icon\android-icon-192x192.png" />
-    <Content Include="_data\_images\_icon\android-icon-36x36.png" />
-    <Content Include="_data\_images\_icon\android-icon-48x48.png" />
-    <Content Include="_data\_images\_icon\android-icon-72x72.png" />
-    <Content Include="_data\_images\_icon\android-icon-96x96.png" />
-    <Content Include="_data\_images\_icon\apple-icon-114x114.png" />
-    <Content Include="_data\_images\_icon\apple-icon-120x120.png" />
-    <Content Include="_data\_images\_icon\apple-icon-144x144.png" />
-    <Content Include="_data\_images\_icon\apple-icon-152x152.png" />
-    <Content Include="_data\_images\_icon\apple-icon-180x180.png" />
-    <Content Include="_data\_images\_icon\apple-icon-57x57.png" />
-    <Content Include="_data\_images\_icon\apple-icon-60x60.png" />
-    <Content Include="_data\_images\_icon\apple-icon-72x72.png" />
-    <Content Include="_data\_images\_icon\apple-icon-76x76.png" />
-    <Content Include="_data\_images\_icon\apple-icon-precomposed.png" />
-    <Content Include="_data\_images\_icon\apple-icon.png" />
-    <Content Include="_data\_images\_icon\browserconfig.xml" />
-    <Content Include="_data\_images\_icon\favicon-16x16.png" />
-    <Content Include="_data\_images\_icon\favicon-32x32.png" />
-    <Content Include="_data\_images\_icon\favicon-96x96.png" />
-    <Content Include="_data\_images\_icon\favicon.ico" />
-    <Content Include="_data\_images\_icon\ms-icon-144x144.png" />
-    <Content Include="_data\_images\_icon\ms-icon-150x150.png" />
-    <Content Include="_data\_images\_icon\ms-icon-310x310.png" />
-    <Content Include="_data\_images\_icon\ms-icon-70x70.png" />
-    <Content Include="_data\_seed\schema.product.json" />
-    <Content Include="_config\services-logging.config" />
-    <Content Include="_config\services-ticker.config" />
-    <Content Include="_config\services-localization.config" />
-    <Content Include="_config\services-ims.config" />
-    <Content Include="_config\services-init.config">
+    <Content Include="routing.config" />
+    <Content Include="pages-routing.config" />
+    <Content Include="handlers.config" />
+    <Content Include="services-app.config" />
+    <Content Include="services-cms.config" />
+    <Content Include="services-comm.config" />
+    <Content Include="tokens.config" />
+    <Content Include="Data\Images\logo-simple.jpg" />
+    <Content Include="Data\Images\logo.jpg" />
+    <Content Include="Data\Images\_icon\android-icon-144x144.png" />
+    <Content Include="Data\Images\_icon\android-icon-192x192.png" />
+    <Content Include="Data\Images\_icon\android-icon-36x36.png" />
+    <Content Include="Data\Images\_icon\android-icon-48x48.png" />
+    <Content Include="Data\Images\_icon\android-icon-72x72.png" />
+    <Content Include="Data\Images\_icon\android-icon-96x96.png" />
+    <Content Include="Data\Images\_icon\apple-icon-114x114.png" />
+    <Content Include="Data\Images\_icon\apple-icon-120x120.png" />
+    <Content Include="Data\Images\_icon\apple-icon-144x144.png" />
+    <Content Include="Data\Images\_icon\apple-icon-152x152.png" />
+    <Content Include="Data\Images\_icon\apple-icon-180x180.png" />
+    <Content Include="Data\Images\_icon\apple-icon-57x57.png" />
+    <Content Include="Data\Images\_icon\apple-icon-60x60.png" />
+    <Content Include="Data\Images\_icon\apple-icon-72x72.png" />
+    <Content Include="Data\Images\_icon\apple-icon-76x76.png" />
+    <Content Include="Data\Images\_icon\apple-icon-precomposed.png" />
+    <Content Include="Data\Images\_icon\apple-icon.png" />
+    <Content Include="Data\Images\_icon\browserconfig.xml" />
+    <Content Include="Data\Images\_icon\favicon-16x16.png" />
+    <Content Include="Data\Images\_icon\favicon-32x32.png" />
+    <Content Include="Data\Images\_icon\favicon-96x96.png" />
+    <Content Include="Data\Images\_icon\favicon.ico" />
+    <Content Include="Data\Images\_icon\ms-icon-144x144.png" />
+    <Content Include="Data\Images\_icon\ms-icon-150x150.png" />
+    <Content Include="Data\Images\_icon\ms-icon-310x310.png" />
+    <Content Include="Data\Images\_icon\ms-icon-70x70.png" />
+    <Content Include="Data\Seed\schema.product.json" />
+    <Content Include="services-logging.config" />
+    <Content Include="services-ticker.config" />
+    <Content Include="services-localization.config" />
+    <Content Include="services-ims.config" />
+    <Content Include="services-init.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="_data\_seed\_seed.json" />
-    <Content Include="_data\_seed\data.users.json" />
-    <Content Include="_data\_seed\schema.metadata.json" />
-    <Content Include="_data\_seed\schema.process.json" />
-    <Content Include="_data\_images\_icon\manifest.json" />
-    <Content Include="_data\_seed\data.navbar.json" />
-    <Content Include="_data\_seed\schema.process-COMPLETE.json" />
-    <Content Include="_data\_seed\data.occ.json" />
+    <Content Include="Data\Seed\_seed.json" />
+    <Content Include="Data\Seed\data.users.json" />
+    <Content Include="Data\Seed\schema.metadata.json" />
+    <Content Include="Data\Seed\schema.process.json" />
+    <Content Include="Data\Images\_icon\manifest.json" />
+    <Content Include="Data\Seed\data.navbar.json" />
+    <Content Include="Data\Seed\data.occ.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -461,10 +460,10 @@
     <Compile Include="Server\Start\Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="_config\app.config">
+    <Content Include="app.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="_config\services-framework.config">
+    <Content Include="services-framework.config">
       <SubType>Designer</SubType>
     </Content>
     <None Include="Web.Debug.config">
@@ -490,7 +489,8 @@
     <Folder Include="Client\modules\toolkit\watcher\" />
     <Folder Include="Client\modules\toolkit\webapi\" />
     <Folder Include="Client\modules\toolkit\webscript\" />
-    <Folder Include="_data\_db\" />
+    <Folder Include="Data\DB\" />
+    <Folder Include="_config\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,4 +1,4 @@
-﻿/* remove all rounded corners. */
+﻿/* GENERIC */
 * {
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
@@ -10,7 +10,7 @@ body {
     padding-top:51px;
     overflow-y:scroll;
 }
-/* chrome scroll bar */
+/* CHROME SCROLL BAR */
 ::-webkit-scrollbar {
     height: 12px;
     width: 8px;
@@ -24,7 +24,7 @@ body {
 ::-webkit-scrollbar-corner {
     background: none;
 }
-/* utils */
+/* UTILS */
 .wstretch {
     width:100%;
 }
@@ -37,13 +37,13 @@ body {
 .small-margin-bottom {
     margin-bottom:10px;
 }
-/* generic links. */
+/* LINKS */
 a, a:hover {
     text-decoration: none;
 }
-/* for angular ui workaround. */
+/* ANGULAR-UI */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
-/* separators. */
+/* SEPARATORS */
 hr { border-bottom: 1px solid silver; }
 /* HEADER */
 .page .header {
@@ -73,6 +73,20 @@ hr { border-bottom: 1px solid silver; }
     border: 1px solid silver;
     box-shadow: rgb(213, 213, 213) 1px 1px 7px 1px;
 }
+/* box-menu pages */
+.box-menu {
+    border-top: solid 1px #eAeAeA;
+    padding-top: 20px;
+}
+.box-menu .grid .card {
+    margin:0;
+}
+.box-menu .grid .name {
+    text-transform:uppercase;
+}
+.box-menu .grid .btn-toolbar .btn {
+    border-color: #eAeAeA;
+}
 /* PANELS */
 .panel {
     border: 1px solid silver;
@@ -81,3 +95,4 @@ hr { border-bottom: 1px solid silver; }
 .panel-heading {
     background-color:transparent !important;
 }
+
