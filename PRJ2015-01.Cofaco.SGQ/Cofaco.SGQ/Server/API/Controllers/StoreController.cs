@@ -14,14 +14,14 @@ using Toolkit.Apps.Web.Framework.Controllers;
 
 namespace Cofaco.SGQ.Server.API.Controllers
 {
+    //
+    // Notes on this controller:
+    // Parameter 'id' is the entity identifier in the data store.
+    // We named it 'id' so that it can match the routing defined.
+    //
+
     public class StoreController : AServiceWrapperController<IStore>
     {
-        //
-        // Notes on this controller:
-        // Parameter 'id' is the entity identifier in the data store.
-        // We named 'id' so that it can match the routing defined.
-        //
-
         [ActionName("create")]
         [HttpPost]
         public IHttpActionResult Create(string id, [FromBody] Value val)

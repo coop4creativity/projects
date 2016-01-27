@@ -38,6 +38,14 @@
                     {
                         "type": "VIEW",
                         "url": "/entity/{ID}"
+                    },
+                    {
+                        "type": "CREATE",
+                        "url": "/entity/{ID}"
+                    },
+                    {
+                        "type": "EDIT",
+                        "url": "/entity/{ID}"
                     }
                 ],
                 "schemas": [

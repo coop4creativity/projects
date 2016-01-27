@@ -14,7 +14,7 @@ angular.module('toolkit.cms').factory('tkEntityDALService', ['$q', '$http', func
     // Base Url for API.
     //
 
-    var _baseUrl = '~/_api';
+    var _baseUrl = '[API]:~/';
 
     //
     // CRUD operations.

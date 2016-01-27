@@ -10,11 +10,13 @@
 */
 
 /* navigation bars. */
-.navbar * {
-    color: white;
-}
 .navbar {
     margin-bottom: 0;
+    border-bottom: 1px solid silver;
+    box-shadow: rgb(213, 213, 213) 1px 1px 7px 1px;
+}
+.navbar * {
+    color: white;
 }
 .navbar a:hover,
 .navbar a:link,

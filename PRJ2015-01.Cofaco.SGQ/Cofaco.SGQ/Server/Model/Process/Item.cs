@@ -13,7 +13,9 @@ using Toolkit.Core.Extensions;
 
 namespace Cofaco.SGQ.Server.Model.Process
 {
-    public class Item : IID<int>, IAuditable<string> 
+    public class Item : 
+        IID<int>, 
+        IAuditable<string> 
     {
         //
         // PROPERTIES

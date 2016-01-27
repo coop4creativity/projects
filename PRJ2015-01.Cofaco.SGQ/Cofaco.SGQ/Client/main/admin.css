@@ -24,6 +24,19 @@ body {
 ::-webkit-scrollbar-corner {
     background: none;
 }
+/* utils */
+.wstretch {
+    width:100%;
+}
+.hstretch {
+    height:100%;
+}
+.nomargin {
+    margin:0;
+}
+.small-margin-bottom {
+    margin-bottom:10px;
+}
 /* generic links. */
 a, a:hover {
     text-decoration: none;
@@ -32,20 +45,6 @@ a, a:hover {
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 /* separators. */
 hr { border-bottom: 1px solid silver; }
-/* list view for items. */
-.list-view  {
-}
-.list-view .list img {
-    max-width: 48px;
-}
-.list-view .list-group-item {
-    margin-bottom:5px;
-}
-.list-view .toolbar {
-    border-bottom:1px solid #ddd;
-    padding-bottom:10px;
-    margin-bottom:20px;
-}
 /* HEADER */
 .page .header {
     padding: 8px;
@@ -68,4 +67,17 @@ hr { border-bottom: 1px solid silver; }
 }
 .page .header .name {
     text-transform:uppercase;
+}
+/* BOX SHADOW */
+.shadow {
+    border: 1px solid silver;
+    box-shadow: rgb(213, 213, 213) 1px 1px 7px 1px;
+}
+/* PANELS */
+.panel {
+    border: 1px solid silver;
+    box-shadow: rgb(213, 213, 213) 1px 1px 7px 1px;
+}
+.panel-heading {
+    background-color:transparent !important;
 }

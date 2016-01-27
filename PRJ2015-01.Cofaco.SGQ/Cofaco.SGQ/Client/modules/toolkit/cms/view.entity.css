@@ -34,13 +34,6 @@
 .entity-view .toolbar select {
     border-color: #ddd;
 }
-.entity-view .toolbar {
-    border-style:solid;
-    border-width:1px;
-    background-color:#fff;
-    padding: 8px;
-    margin-bottom: 3px;
-}
 .entity-view .toolbar .form-group {
     margin-right: 3px;
 }
@@ -53,7 +46,6 @@
 }
 .entity-view .list .list-group-item {
     margin-bottom: 3px;
-    border-color: #ddd;
     padding:8px;
 }
 .entity-view .list .list-group-item .btn-toolbar {

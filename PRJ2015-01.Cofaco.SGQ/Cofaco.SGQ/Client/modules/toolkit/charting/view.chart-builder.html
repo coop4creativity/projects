@@ -9,7 +9,7 @@
    ============================================================================
 -->
 
-<div class="chart-builder-view">
+<div class="page">
     <!-- HEADER -->
     <div class="header">
         <h3 class="name"><span data-ng-if="entity.icon != ''" data-ng-class="['glyphicon', 'glyphicon-' + 'signal']" aria-hidden="true"></span>&nbsp;Novo Gráfico</h3>
@@ -17,60 +17,68 @@
     </div>
     <!-- /HEADER -->
     <!-- TOOLBAR -->
-    <div class="clearfix toolbar">
-        <div class="pull-left">
-            <div class="form-inline" role="form" aria-label="...">
-                <div class="form-group" data-ng-repeat="btn in toolbar | filter:{ where: 'left' }" data-ng-switch="btn.kind">
-                    <!-- BUTTON -->
-                    <button data-ng-switch-when="BUTTON" data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback()">
-                        <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
-                        <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
-                    </button>
-                    <!-- SEARCH-BOX -->
-                    <div data-ng-switch-when="SEARCH">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
-                            </span>
-                            <input type="text" class="form-control" placeholder="{{ btn.placeholder }}" ng-model="$parent.$parent.filterStr">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="clearfix toolbar">
+                        <div class="pull-left">
+                            <div class="form-inline" role="form" aria-label="...">
+                                <div class="form-group" data-ng-repeat="btn in toolbar | filter:{ where: 'left' }" data-ng-switch="btn.kind">
+                                    <!-- BUTTON -->
+                                    <button data-ng-switch-when="BUTTON" data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback()">
+                                        <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
+                                        <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
+                                    </button>
+                                    <!-- SEARCH-BOX -->
+                                    <div data-ng-switch-when="SEARCH">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="{{ btn.placeholder }}" ng-model="$parent.$parent.filterStr">
+                                        </div>
+                                    </div>
+                                    <!-- SELECTORS -->
+                                    <div data-ng-switch-when="SELECT">
+                                        <div class="input-group">
+                                            <div data-ng-if="btn.label != ''" class="input-group-addon">{{ btn.label }}</div>
+                                            <select class="form-control" data-ng-model="btn.selected" data-ng-change="btn.callback()">
+                                                <option data-ng-repeat="opt in btn.source.items" value="{{ opt[btn.source.field.value] }}" data-ng-selected="btn.selected == opt[btn.source.field.value]">{{ opt[btn.source.field.name] }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- SELECTORS -->
-                    <div data-ng-switch-when="SELECT">
-                        <div class="input-group">
-                            <div data-ng-if="btn.label != ''" class="input-group-addon">{{ btn.label }}</div>
-                            <select class="form-control" data-ng-model="btn.selected" data-ng-change="btn.callback()">
-                                <option data-ng-repeat="opt in btn.source.items" value="{{ opt[btn.source.field.value] }}" data-ng-selected="btn.selected == opt[btn.source.field.value]">{{ opt[btn.source.field.name] }}</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pull-right">
-            <div class="form-inline" role="form" aria-label="...">
-                <div class="form-group" data-ng-repeat="btn in toolbar | filter:{ where: 'right' }" data-ng-switch="btn.kind">
-                    <!-- BUTTON -->
-                    <button data-ng-switch-when="BUTTON" data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback()">
-                        <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
-                        <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
-                    </button>
-                    <!-- SEARCH-BOX -->
-                    <div data-ng-switch-when="SEARCH">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
-                            </span>
-                            <input type="text" class="form-control" placeholder="{{ btn.placeholder }}" ng-model="$parent.$parent.filterStr">
-                        </div>
-                    </div>
-                    <!-- SELECTORS -->
-                    <div data-ng-switch-when="SELECT">
-                        <div class="input-group">
-                            <div data-ng-if="btn.label != ''" class="input-group-addon">{{ btn.label }}</div>
-                            <select class="form-control" data-ng-model="btn.selected" data-ng-change="btn.callback()">
-                                <option data-ng-repeat="opt in btn.source.items" value="{{ opt[btn.source.field.value] }}" data-ng-selected="btn.selected == opt[btn.source.field.value]">{{ opt[btn.source.field.name] }}</option>
-                            </select>
+                        <div class="pull-right">
+                            <div class="form-inline" role="form" aria-label="...">
+                                <div class="form-group" data-ng-repeat="btn in toolbar | filter:{ where: 'right' }" data-ng-switch="btn.kind">
+                                    <!-- BUTTON -->
+                                    <button data-ng-switch-when="BUTTON" data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback()">
+                                        <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
+                                        <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
+                                    </button>
+                                    <!-- SEARCH-BOX -->
+                                    <div data-ng-switch-when="SEARCH">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="{{ btn.placeholder }}" ng-model="$parent.$parent.filterStr">
+                                        </div>
+                                    </div>
+                                    <!-- SELECTORS -->
+                                    <div data-ng-switch-when="SELECT">
+                                        <div class="input-group">
+                                            <div data-ng-if="btn.label != ''" class="input-group-addon">{{ btn.label }}</div>
+                                            <select class="form-control" data-ng-model="btn.selected" data-ng-change="btn.callback()">
+                                                <option data-ng-repeat="opt in btn.source.items" value="{{ opt[btn.source.field.value] }}" data-ng-selected="btn.selected == opt[btn.source.field.value]">{{ opt[btn.source.field.name] }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -79,49 +87,61 @@
     </div>
     <!-- /TOOLBAR -->
     <!-- CONTENT -->
-    <div class="row" data-ng-switch="layout">
+    <div class="row">
         <!-- PROPERTIES -->
-        <div class="col-md-4" style="border-right:1px solid #eAeAeA">            
-            <h5>Propriedades:</h5>
-            <div role="form">
-                <div class="form-group">
-                    <label for="nameID">Nome</label>
-                    <input type="text" class="form-control" id="nameID" placeholder="Nome" data-ng-model="chart.name">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Propriedades</h3>
                 </div>
-                <div class="form-group">
-                    <label for="descriptionID">Descrição</label>
-                    <textarea class="form-control" rows="3" id="descriptionID" data-ng-model="chart.description" style="resize:none"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="typeID">Tipo:</label>
-                    <select class="form-control" id="typeID" data-ng-model="type" data-ng-change="changeType()">
-                        <option data-ng-repeat="src in charType" value="{{ src.id }}" data-ng-selected="type == src.id">{{ src.name }}</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="datasourceID">Fonte de Dados</label>
-                    <select class="form-control" id="datasourceID" data-ng-model="source" data-ng-change="changeSource()">
-                        <option data-ng-repeat="src in entityList" value="{{ src.id }}" data-ng-selected="source == src.id">{{ src.name }}</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="serieX">X</label>
-                    <select class="form-control" id="serieX" data-ng-model="propX" data-ng-change="changeX()">
-                        <option data-ng-repeat="src in properties" value="{{ src.name }}" data-ng-selected="propX == src.name">{{ src.displayName }}</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="serieY">Y</label>
-                    <select class="form-control" id="serieY" data-ng-model="propY" data-ng-change="changeY()">
-                        <option data-ng-repeat="src in properties" value="{{ src.name }}" data-ng-selected="propY == src.name">{{ src.displayName }}</option>
-                    </select>
+                <div class="panel-body">
+                    <div role="form">
+                        <div class="form-group">
+                            <label for="nameID">Nome</label>
+                            <input type="text" class="form-control" id="nameID" placeholder="Nome" data-ng-model="chart.name">
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionID">Descrição</label>
+                            <textarea class="form-control" rows="3" id="descriptionID" data-ng-model="chart.description" style="resize:none"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="typeID">Tipo:</label>
+                            <select class="form-control" id="typeID" data-ng-model="type" data-ng-change="changeType()">
+                                <option data-ng-repeat="src in charType" value="{{ src.id }}" data-ng-selected="type == src.id">{{ src.name }}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="datasourceID">Fonte de Dados</label>
+                            <select class="form-control" id="datasourceID" data-ng-model="source" data-ng-change="changeSource()">
+                                <option data-ng-repeat="src in entityList" value="{{ src.id }}" data-ng-selected="source == src.id">{{ src.name }}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="serieX">X</label>
+                            <select class="form-control" id="serieX" data-ng-model="propX" data-ng-change="changeX()">
+                                <option data-ng-repeat="src in properties" value="{{ src.name }}" data-ng-selected="propX == src.name">{{ src.displayName }}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="serieY">Y</label>
+                            <select class="form-control" id="serieY" data-ng-model="propY" data-ng-change="changeY()">
+                                <option data-ng-repeat="src in properties" value="{{ src.name }}" data-ng-selected="propY == src.name">{{ src.displayName }}</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- PREVIEW -->
         <div class="col-md-8">
-            <h5>Gráfico:</h5>
-            <div id="chartContainer" style="width:100%;height:400px;">&nbsp;</div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Pré-visualização</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="chartContainer" style="width:100%;height:400px;">&nbsp;</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

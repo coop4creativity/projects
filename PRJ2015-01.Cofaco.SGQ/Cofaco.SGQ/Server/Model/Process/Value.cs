@@ -14,7 +14,10 @@ using System.Collections.Generic;
 
 namespace Cofaco.SGQ.Server.Model.Process
 {
-    public class Value : SortedDictionary<string, object>, IID<int>, IAuditable<string>, IDictionary<string, object>
+    public class Value : SortedDictionary<string, object>, 
+        IID<int>, 
+        IAuditable<string>, 
+        IDictionary<string, object>
     {
         //
         // CONSTANTS

@@ -17,60 +17,64 @@
     </div>
     <!-- /HEADER -->
     <!-- TOOLBAR -->
-    <div class="clearfix toolbar">
-        <div class="pull-left">
-            <div class="form-inline" role="form" aria-label="...">
-                <div class="form-group" data-ng-repeat="btn in toolbarList | filter:{ where: 'left' }" data-ng-switch="btn.kind">
-                    <!-- BUTTON -->
-                    <button data-ng-switch-when="BUTTON" data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback()">
-                        <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
-                        <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
-                    </button>
-                    <!-- SEARCH-BOX -->
-                    <div data-ng-switch-when="SEARCH">
-                        <div class="input-group">
-                            <span class="input-group-addon">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="clearfix toolbar">
+                <div class="pull-left">
+                    <div class="form-inline" role="form" aria-label="...">
+                        <div class="form-group" data-ng-repeat="btn in toolbarList | filter:{ where: 'left' }" data-ng-switch="btn.kind">
+                            <!-- BUTTON -->
+                            <button data-ng-switch-when="BUTTON" data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback()">
                                 <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
-                            </span>
-                            <input type="text" class="form-control" placeholder="{{ btn.placeholder }}" ng-model="$parent.$parent.filterStr">
-                        </div>
-                    </div>
-                    <!-- SELECTORS -->
-                    <div data-ng-switch-when="SELECT">
-                        <div class="input-group">
-                            <div data-ng-if="btn.label != ''" class="input-group-addon">{{ btn.label }}</div>
-                            <select class="form-control" data-ng-model="btn.selected" data-ng-change="btn.callback()">
-                                <option data-ng-repeat="opt in btn.source.items" value="{{ opt[btn.source.field.value] }}" data-ng-selected="btn.selected == opt[btn.source.field.value]">{{ opt[btn.source.field.name] }}</option>
-                            </select>
+                                <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
+                            </button>
+                            <!-- SEARCH-BOX -->
+                            <div data-ng-switch-when="SEARCH">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="{{ btn.placeholder }}" ng-model="$parent.$parent.filterStr">
+                                </div>
+                            </div>
+                            <!-- SELECTORS -->
+                            <div data-ng-switch-when="SELECT">
+                                <div class="input-group">
+                                    <div data-ng-if="btn.label != ''" class="input-group-addon">{{ btn.label }}</div>
+                                    <select class="form-control" data-ng-model="btn.selected" data-ng-change="btn.callback()">
+                                        <option data-ng-repeat="opt in btn.source.items" value="{{ opt[btn.source.field.value] }}" data-ng-selected="btn.selected == opt[btn.source.field.value]">{{ opt[btn.source.field.name] }}</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="pull-right">
-            <div class="form-inline" role="form" aria-label="...">
-                <div class="form-group" data-ng-repeat="btn in toolbarList | filter:{ where: 'right' }" data-ng-switch="btn.kind">
-                    <!-- BUTTON -->
-                    <button data-ng-switch-when="BUTTON" data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback()">
-                        <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
-                        <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
-                    </button>
-                    <!-- SEARCH-BOX -->
-                    <div data-ng-switch-when="SEARCH">
-                        <div class="input-group">
-                            <span class="input-group-addon">
+                <div class="pull-right">
+                    <div class="form-inline" role="form" aria-label="...">
+                        <div class="form-group" data-ng-repeat="btn in toolbarList | filter:{ where: 'right' }" data-ng-switch="btn.kind">
+                            <!-- BUTTON -->
+                            <button data-ng-switch-when="BUTTON" data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback()">
                                 <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
-                            </span>
-                            <input type="text" class="form-control" placeholder="{{ btn.placeholder }}" ng-model="$parent.$parent.filterStr">
-                        </div>
-                    </div>
-                    <!-- SELECTORS -->
-                    <div data-ng-switch-when="SELECT">
-                        <div class="input-group">
-                            <div data-ng-if="btn.label != ''" class="input-group-addon">{{ btn.label }}</div>
-                            <select class="form-control" data-ng-model="btn.selected" data-ng-change="btn.callback()">
-                                <option data-ng-repeat="opt in btn.source.items" value="{{ opt[btn.source.field.value] }}" data-ng-selected="btn.selected == opt[btn.source.field.value]">{{ opt[btn.source.field.name] }}</option>
-                            </select>
+                                <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
+                            </button>
+                            <!-- SEARCH-BOX -->
+                            <div data-ng-switch-when="SEARCH">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="{{ btn.placeholder }}" ng-model="$parent.$parent.filterStr">
+                                </div>
+                            </div>
+                            <!-- SELECTORS -->
+                            <div data-ng-switch-when="SELECT">
+                                <div class="input-group">
+                                    <div data-ng-if="btn.label != ''" class="input-group-addon">{{ btn.label }}</div>
+                                    <select class="form-control" data-ng-model="btn.selected" data-ng-change="btn.callback()">
+                                        <option data-ng-repeat="opt in btn.source.items" value="{{ opt[btn.source.field.value] }}" data-ng-selected="btn.selected == opt[btn.source.field.value]">{{ opt[btn.source.field.name] }}</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -85,7 +89,7 @@
             <div class="list">
                 <div class="list-group">
                     <!-- ITEMS -->
-                    <div class="list-group-item" data-ng-repeat="item in list | filter:filterStr">
+                    <div class="list-group-item shadow" data-ng-repeat="item in list | filter:filterStr">
                         <div class="row">
 
                             <!-- PROPERTIES -->
@@ -130,7 +134,7 @@
                 <div class="row" vertilize-container>
                     <!-- LIST ITEMS -->
                     <div class="col-xs-12 col-md-3 card" data-ng-repeat="item in list | filter:filterStr">
-                        <div class="thumbnail">
+                        <div class="thumbnail shadow">
                             <!-- THUMBNAIL -->
                             <div data-ng-hide="itemConfig.view.thumbnail == undefined" class="media-left">
                                 <img data-ng-if="itemConfig.view.thumbnail.type == 'PATTERN'" class="img-responsive" alt="{{ item[itemConfig.view.title] }}" data-ng-src="{{ (itemConfig.view.thumbnail.value + item[itemConfig.view.id]) | tkResolveUrl }}">
@@ -164,28 +168,33 @@
         <!-- /LAYOUT: GRID -->
         <!-- LAYOUT: TABLE -->
         <div class="col-md-12" data-ng-switch-when="TABLE">
-            <div class="table-responsive">
-                <table class="table table-striped table-hover table-condensed">
-                    <tr>
-                        <th data-ng-repeat="field in view.fields">{{ field.displayName }}</th>
-                        <th>&nbsp;</th>
-                    </tr>
-                    <tr data-ng-repeat="item in list | filter:filterStr">
-                        <th data-ng-repeat="field in view.fields">{{ item[field.name] | filterpicker:field.filter }}</th>
-                        <th>
-                            <div class="clearfix">
-                                <div class="btn-toolbar pull-right" role="toolbar" aria-label="...">
-                                    <div class="btn-group" data-ng-repeat="btn in toolbarItem" role="group">
-                                        <button data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback(item)">
-                                            <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
-                                            <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
-                                        </button>
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-condensed">
+                            <tr>
+                                <th data-ng-repeat="field in view.fields">{{ field.displayName }}</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            <tr data-ng-repeat="item in list | filter:filterStr">
+                                <th data-ng-repeat="field in view.fields">{{ item[field.name] | filterpicker:field.filter }}</th>
+                                <th>
+                                    <div class="clearfix">
+                                        <div class="btn-toolbar pull-right" role="toolbar" aria-label="...">
+                                            <div class="btn-group" data-ng-repeat="btn in toolbarItem" role="group">
+                                                <button data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback(item)">
+                                                    <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
+                                                    <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </th>
-                    </tr>
-                </table>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- /LAYOUT: TABLE -->

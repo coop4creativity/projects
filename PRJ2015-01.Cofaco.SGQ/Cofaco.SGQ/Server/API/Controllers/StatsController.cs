@@ -14,10 +14,6 @@ namespace Cofaco.SGQ.Server.API.Controllers
 {
     public class StatsController : Toolkit.Apps.Web.Framework.View.ApiController
     {
-        //
-        // GET-OPERATIONS -----------------------------------------------------
-        //
-
         [HttpGet]
         public IHttpActionResult Get()
         {

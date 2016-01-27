@@ -31,7 +31,7 @@
             {
                 "name": "Sair",
                 "icon": "log-out",
-                "style": "danger",
+                "style": "link",
                 "action": "LOGOUT"
             }
         ]
