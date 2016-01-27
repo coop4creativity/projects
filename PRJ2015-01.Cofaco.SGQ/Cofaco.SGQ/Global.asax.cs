@@ -23,13 +23,13 @@ namespace Cofaco.SGQ
             // Initialize the framework.
             //
 
-            Toolkit.Apps.Web.Framework.Context.Host.Start(Server, RouteTable.Routes, "_config/app.config", sender, e);
+            Toolkit.Apps.Web.Framework.Context.Host.Start(Server, RouteTable.Routes, "app.config", sender, e);
 
             //
             // Set the new data directory path.
             //
 
-            string dataDirectory = Path.Combine(Toolkit.Apps.Web.Framework.Context.Host.AppContext.Config.Host.BasePhysicalFolder, "_data\\_db\\");
+            string dataDirectory = Path.Combine(Toolkit.Apps.Web.Framework.Context.Host.AppContext.Config.Host.BasePhysicalFolder, "Data\\DB\\");
             AppDomain.CurrentDomain.SetData("DataDirectory", dataDirectory);
 
             //

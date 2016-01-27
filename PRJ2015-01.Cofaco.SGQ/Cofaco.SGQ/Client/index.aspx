@@ -9,24 +9,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <!-- ICON -->
-    <link rel="apple-touch-icon" sizes="57x57" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/apple-icon-57x57.png")%>" />
-    <link rel="apple-touch-icon" sizes="60x60" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/apple-icon-60x60.png")%>" />
-    <link rel="apple-touch-icon" sizes="72x72" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/apple-icon-72x72.png")%>" />
-    <link rel="apple-touch-icon" sizes="76x76" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/apple-icon-76x76.png")%>" />
-    <link rel="apple-touch-icon" sizes="114x114" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/apple-icon-114x114.png")%>" />
-    <link rel="apple-touch-icon" sizes="120x120" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/apple-icon-120x120.png")%>" />
-    <link rel="apple-touch-icon" sizes="144x144" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/apple-icon-144x144.png")%>" />
-    <link rel="apple-touch-icon" sizes="152x152" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/apple-icon-152x152.png")%>" />
-    <link rel="apple-touch-icon" sizes="180x180" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/apple-icon-180x180.png")%>" />
-    <link rel="icon" type="image/png" sizes="192x192" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/android-icon-192x192.png")%>" />
-    <link rel="icon" type="image/png" sizes="32x32" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/favicon-32x32.png")%>" />
-    <link rel="icon" type="image/png" sizes="96x96" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/favicon-96x96.png")%>" />
-    <link rel="icon" type="image/png" sizes="16x16" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/favicon-16x16.png")%>" />
-    <link rel="shortcut icon" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/favicon.ico")%>" type="image/x-icon" />
-    <link rel="icon" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/favicon.ico")%>" type="image/x-icon" />
-    <link rel="manifest" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/manifest.json")%>" />
+    <link rel="apple-touch-icon" sizes="57x57" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/apple-icon-57x57.png")%>" />
+    <link rel="apple-touch-icon" sizes="60x60" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/apple-icon-60x60.png")%>" />
+    <link rel="apple-touch-icon" sizes="72x72" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/apple-icon-72x72.png")%>" />
+    <link rel="apple-touch-icon" sizes="76x76" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/apple-icon-76x76.png")%>" />
+    <link rel="apple-touch-icon" sizes="114x114" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/apple-icon-114x114.png")%>" />
+    <link rel="apple-touch-icon" sizes="120x120" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/apple-icon-120x120.png")%>" />
+    <link rel="apple-touch-icon" sizes="144x144" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/apple-icon-144x144.png")%>" />
+    <link rel="apple-touch-icon" sizes="152x152" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/apple-icon-152x152.png")%>" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/apple-icon-180x180.png")%>" />
+    <link rel="icon" type="image/png" sizes="192x192" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/android-icon-192x192.png")%>" />
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/favicon-32x32.png")%>" />
+    <link rel="icon" type="image/png" sizes="96x96" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/favicon-96x96.png")%>" />
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/favicon-16x16.png")%>" />
+    <link rel="shortcut icon" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/favicon.ico")%>" type="image/x-icon" />
+    <link rel="icon" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/favicon.ico")%>" type="image/x-icon" />
+    <link rel="manifest" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/manifest.json")%>" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" href="<%= Ctx.Resolver.ResolveUrl("~/_data/_images/_icon/ms-icon-144x144.png")%>" />
+    <meta name="msapplication-TileImage" href="<%= Ctx.Resolver.ResolveUrl("~/Data/Images/Icon/ms-icon-144x144.png")%>" />
     <meta name="theme-color" content="#ffffff" />
     <!-- CLOUD -->
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Oswald' />
@@ -98,6 +98,7 @@
     <!-- ANGULAR COMPONENTS -->
     <framework:ScriptIncludeFolder runat="server" Folder="~/Client/support" Pattern="*.js" Mode="HERE" />
     <framework:ScriptIncludeFolder runat="server" Folder="~/Client/modules" Pattern="*.js" Mode="HERE" Recursive="true" />
+    <framework:ScriptIncludeFolder runat="server" Folder="~/Client" Pattern="*.js" Mode="HERE" />
     <framework:ScriptIncludeFolder runat="server" Folder="~/Client/main" Pattern="*.js" Mode="HERE" />
 </body>
 </html>
