@@ -8,7 +8,7 @@
             {
                 "ref": "__cluster",
                 "icon": "hdd",
-                "name": "Cluster",
+                "visibility": "ACTIVE",
                 "visibility": "UNKNOWN",
                 "description": "Cluster definition",
                 "api": {
@@ -95,7 +95,7 @@
                 "ref": "__entity",
                 "icon": "hdd",
                 "name": "Entity",
-                "visibility": "UNKNOWN",
+                "visibility": "ACTIVE",
                 "description": "Entity definition",
                 "api": {
                     "create": "cmsddl/entity-create",
@@ -189,7 +189,7 @@
                 "ref": "__view",
                 "icon": "hdd",
                 "name": "View",
-                "visibility": "UNKNOWN",
+                "visibility": "ACTIVE",
                 "description": "Entity view definition",
                 "api": {
                     "create": "cmsddl/view-create",
@@ -361,7 +361,7 @@
                 "ref": "users",
                 "icon": "user",
                 "name": "Utilizadores",
-                "visibility": "UNKNOWN",
+                "visibility": "ACTIVE",
                 "description": "Gestão de Utilizadores",
                 "api": {
                     "create": "user/create",

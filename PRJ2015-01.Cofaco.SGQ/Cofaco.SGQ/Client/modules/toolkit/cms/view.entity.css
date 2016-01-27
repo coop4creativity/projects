@@ -9,23 +9,6 @@
    ============================================================================
 */
 
-/* header */
-.entity-view .header {
-    padding: 8px;
-    margin-bottom:3px;
-}
-.entity-view .header h1,
-.entity-view .header h2,
-.entity-view .header h3,
-.entity-view .header h4,
-.entity-view .header h5,
-.entity-view .header h6 {
-    margin-top: 5px !important;
-    margin-bottom: 5px !important;
-}
-.entity-view .header .name {
-    text-transform:uppercase;
-}
 /* toolbar */
 .entity-view .toolbar,
 .entity-view .toolbar .btn,
