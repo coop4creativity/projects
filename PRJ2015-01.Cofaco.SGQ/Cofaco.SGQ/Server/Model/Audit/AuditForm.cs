@@ -7,12 +7,14 @@
 // Description:
 // ============================================================================
 
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using Toolkit.Core.Patterns;
 
 namespace Cofaco.SGQ.Server.Model.Audit
 {
-    public class Question :
+    public class AuditForm :
         IID<int>,
         IVisible,
         IAuditable<string>
@@ -37,15 +39,16 @@ namespace Cofaco.SGQ.Server.Model.Audit
         // Info.
         //
 
-        public string Text { get; set; }
-        public bool Required { get; set; }
-        public TypeOfValue Type { get; set; }
+        [JsonIgnore]
+        public AuditTemplate Template { get; set; }
+
+        public ICollection<AuditAnswer> Answers { get; set; }
 
         //
         // CONSTRUCTORS
         //
 
-        public Question()
+        public AuditForm()
         {
             //
             // Base
@@ -58,9 +61,8 @@ namespace Cofaco.SGQ.Server.Model.Audit
             // Info
             //
 
-            Text = string.Empty;
-            Required = true;
-            Type = TypeOfValue.UNKNOWN;
+            Template = null;
+            Answers = null;
 
             //
             // Audits

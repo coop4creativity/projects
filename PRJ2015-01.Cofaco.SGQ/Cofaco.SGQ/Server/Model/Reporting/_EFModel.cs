@@ -7,11 +7,7 @@
 // Description:
 // ============================================================================
 
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
 
 namespace Cofaco.SGQ.Server.Model.Reporting
 {
@@ -19,9 +15,7 @@ namespace Cofaco.SGQ.Server.Model.Reporting
     {
         public static void OnCreateModel(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Model.Reporting.Chart>()
-                .ToTable("CHART")
-                .HasKey(t => t.ID);
+            modelBuilder.Entity<Model.Reporting.Chart>().ToTable("REPORTING_CHART").HasKey(t => t.ID);
         }
     }
 }

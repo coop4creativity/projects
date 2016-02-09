@@ -8,14 +8,16 @@
 // ============================================================================
 
 using System;
+using System.Collections.Generic;
 using Toolkit.Core.Patterns;
 
 namespace Cofaco.SGQ.Server.Model.Audit
 {
-    public class Answer :
+    public class AuditTemplate :
         IID<int>,
         IVisible,
-        IAuditable<string>
+        IAuditable<string>,
+        IDescription<string>
     {
         //
         // Base
@@ -37,14 +39,15 @@ namespace Cofaco.SGQ.Server.Model.Audit
         // Info.
         //
 
-        public string Text { get; set; }
-        public Value Value { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public ICollection<AuditQuestion> Questions { get; set; }
 
         //
         // CONSTRUCTORS
         //
 
-        public Answer()
+        public AuditTemplate()
         {
             //
             // Base
@@ -57,8 +60,9 @@ namespace Cofaco.SGQ.Server.Model.Audit
             // Info
             //
 
-            Text = string.Empty;
-            Value = null;
+            Title = string.Empty;
+            Description = string.Empty;
+            Questions = null;
 
             //
             // Audits

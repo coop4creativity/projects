@@ -17,7 +17,7 @@ namespace Cofaco.SGQ.Server.Model.Audit
     //
 
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum TypeOfValue
+    public enum TypeOfAuditAnswerValue
     {
         UNKNOWN,
         BOOL,

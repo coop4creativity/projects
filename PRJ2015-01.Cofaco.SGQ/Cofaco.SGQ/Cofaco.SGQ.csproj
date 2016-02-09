@@ -468,12 +468,12 @@
     <Compile Include="Server\Framework\Data\ObjSrcBase.cs" />
     <Compile Include="Server\Framework\Data\ObjSrcUser.cs" />
     <Compile Include="Server\Framework\Data\UserAsIdentityUser.cs" />
-    <Compile Include="Server\Model\Audit\Answer.cs" />
-    <Compile Include="Server\Model\Audit\Value.cs" />
+    <Compile Include="Server\Model\Audit\AuditAnswer.cs" />
+    <Compile Include="Server\Model\Audit\AuditAnswerValue.cs" />
     <Compile Include="Server\Model\Audit\_EFModel.cs" />
-    <Compile Include="Server\Model\Audit\Question.cs" />
-    <Compile Include="Server\Model\Audit\Form.cs" />
-    <Compile Include="Server\Model\Audit\Template.cs" />
+    <Compile Include="Server\Model\Audit\AuditQuestion.cs" />
+    <Compile Include="Server\Model\Audit\AuditForm.cs" />
+    <Compile Include="Server\Model\Audit\AuditTemplate.cs" />
     <Compile Include="Server\Model\Audit\_Enums.cs" />
     <Compile Include="Server\Model\Product\_EFModel.cs" />
     <Compile Include="Server\Model\Reporting\Chart.cs" />

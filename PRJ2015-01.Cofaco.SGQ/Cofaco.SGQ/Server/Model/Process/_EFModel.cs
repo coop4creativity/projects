@@ -7,11 +7,7 @@
 // Description:
 // ============================================================================
 
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
 
 namespace Cofaco.SGQ.Server.Model.Process
 {
@@ -19,9 +15,7 @@ namespace Cofaco.SGQ.Server.Model.Process
     {
         public static void OnCreateModel(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Model.Process.Item>()
-                .ToTable("ITEM")
-                .HasKey(t => t.ID);
+            modelBuilder.Entity<Model.Process.Item>().ToTable("PROCESS_ITEM").HasKey(t => t.ID);
         }
     }
 }

@@ -7,17 +7,16 @@
 // Description:
 // ============================================================================
 
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using Toolkit.Core.Patterns;
 
 namespace Cofaco.SGQ.Server.Model.Audit
 {
-    public class Template :
+    public class AuditAnswer :
         IID<int>,
         IVisible,
-        IAuditable<string>,
-        IDescription<string>
+        IAuditable<string>
     {
         //
         // Base
@@ -39,15 +38,29 @@ namespace Cofaco.SGQ.Server.Model.Audit
         // Info.
         //
 
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public ICollection<Question> Questions { get; set; }
+        public string Text { get; set; }
+
+        //
+        // Igonre this value for clients.
+        // Value will be stored in answer
+        // property.
+        //
+
+        [JsonIgnore]
+        public AuditAnswerValue Value { get; set; }
+
+        //
+        // Property not stored/mapped only for 
+        // client set/get.
+        //
+
+        public object Answer { get; set; }
 
         //
         // CONSTRUCTORS
         //
 
-        public Template()
+        public AuditAnswer()
         {
             //
             // Base
@@ -60,9 +73,9 @@ namespace Cofaco.SGQ.Server.Model.Audit
             // Info
             //
 
-            Title = string.Empty;
-            Description = string.Empty;
-            Questions = null;
+            Text = string.Empty;
+            Value = null;
+            Answer = null;
 
             //
             // Audits
