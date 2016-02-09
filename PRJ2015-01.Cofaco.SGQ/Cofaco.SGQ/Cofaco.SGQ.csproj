@@ -362,6 +362,7 @@
     <Content Include="assemblies.config" />
     <Content Include="localization.config" />
     <Content Include="packages.config" />
+    <Content Include="Data\Seed\schema.audit.json" />
     <None Include="Properties\PublishProfiles\LOCALE-FILESYSTEM.pubxml" />
     <None Include="Web.Deploy [DEBUG].config">
       <DependentUpon>Web.config</DependentUpon>

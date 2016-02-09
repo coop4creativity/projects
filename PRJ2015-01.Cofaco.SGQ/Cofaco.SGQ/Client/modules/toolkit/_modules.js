@@ -11,7 +11,7 @@
 angular.module('toolkit.core', []);
 angular.module('toolkit.cms', ['toolkit', 'toolkit.core']);
 angular.module('toolkit.ims', ['toolkit', 'toolkit.core']);
-angular.module('toolkit.ums', ['toolkit', 'toolkit.core']);
+angular.module('toolkit.ums', ['toolkit', 'toolkit.core', 'ngSanitize']);
 angular.module('toolkit.localization', ['toolkit', 'toolkit.core']);
 angular.module('toolkit.logging', ['toolkit', 'toolkit.core']);
 angular.module('toolkit.filesystem', ['toolkit', 'toolkit.core']);
@@ -29,6 +29,7 @@ angular.module('toolkit.watcher', ['toolkit', 'toolkit.core']);
 angular.module('toolkit.templates', ['toolkit', 'toolkit.core']);
 angular.module('toolkit.webscript', ['toolkit', 'toolkit.core']);
 angular.module('toolkit.types', ['toolkit', 'toolkit.core']);
+angular.module('toolkit.types.forms', ['toolkit', 'toolkit.core']);
 angular.module('toolkit.reporting', ['toolkit', 'toolkit.core']);
 angular.module('toolkit.ui', ['toolkit', 'toolkit.core']);
 angular.module('toolkit.webapi', ['toolkit', 'toolkit.core']);

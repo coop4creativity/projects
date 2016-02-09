@@ -18,7 +18,8 @@ var appSpec = {
         'toolkit.cms',
         'toolkit.ims',
         'toolkit.ums',
-        'toolkit.charting'
+        'toolkit.charting',
+        'toolkit.types.forms'
     ],
 
     //

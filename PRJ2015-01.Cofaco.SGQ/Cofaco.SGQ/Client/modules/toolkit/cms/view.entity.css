@@ -51,6 +51,12 @@
 .entity-view .table {
     background-color:#fff;
 }
+.entity-view .table .col-image {
+    max-width:64px;
+    min-width:64px;
+}
 .entity-view .table .btn-toolbar .btn {
     border-color: #eAeAeA;
 }
+
+

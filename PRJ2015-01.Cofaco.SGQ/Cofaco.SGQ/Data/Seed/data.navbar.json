@@ -5,28 +5,33 @@
             {
                 "name": "Produto",
                 "style": "link",
-                "url": "#/entity/product"
+                "url": "/entity/product"
             },
             {
                 "name": "Processo",
                 "style": "link",
-                "url": "#/entity/process"
+                "url": "/entity/process"
+            },
+            {
+                "name": "Auditoria",
+                "style": "link",
+                "url": "/entity/audit"
             },
             {
                 "name": "Relatórios",
                 "style": "link",
-                "url": "#/entity/charts"
+                "url": "/entity/charts"
             },
             {
                 "name": "Utilizadores",
                 "style": "link",
-                "url": "#/entity/users"
+                "url": "/entity/users"
             },
             {
                 "name": "${USER}",
                 "style": "link user",
                 "icon": "user",
-                "url": "#/profile"
+                "url": "/profile"
             },
             {
                 "name": "Sair",

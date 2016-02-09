@@ -82,7 +82,7 @@ angular.module('toolkit.cms').factory('tkEntityDALService', ['$q', '$http', func
     var _delete = function (partial, id) {
 
         var url = toolkit.url.Resolve(_baseUrl + '/' + partial + '/' + id);
-        return toolkit.angular.services.GetServicePromise($q, $http, 'get', url);
+        return toolkit.angular.services.GetServicePromise($q, $http, 'delete', url);
     };
 
     //

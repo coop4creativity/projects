@@ -26,6 +26,7 @@ angular.module('toolkit.cms').controller('tkEntityController', [
         $scope.entity = {};
         $scope.list = [];
         $scope.view = {};
+        $scope.schema = {};
         $scope.layout = null;
         $scope.toolbarItem = [];
         $scope.toolbarList = [];
@@ -116,7 +117,7 @@ angular.module('toolkit.cms').controller('tkEntityController', [
 
         var _edit = function (item) {
 
-            if (_formHas(_form.create)) {
+            if (_formHas(_form.edit)) {
 
                 var url = _formGetUrl(_form.edit);
                 $location.path(url.replace('{ID}', item.id));
@@ -279,6 +280,31 @@ angular.module('toolkit.cms').controller('tkEntityController', [
         };
 
         //
+        // TYPES
+        //
+
+        var _isImageUrlType = function (type) {
+
+            var output = false;
+
+            if (angular.isDefined(type)) {
+                output = type.trim().indexOf("IMAGE-URL") == 0;
+            }
+            
+            return output;
+        }
+
+        var _instantiateImageUrlType = function (url, id) {
+
+            return url.slice(url.indexOf(":") + 1).trim().replace('{ID}', id);
+        }
+
+        $scope.type = {
+            isImageUrl: _isImageUrlType,
+            instantiateImageUrlType: _instantiateImageUrlType
+        };
+
+        //
         // SCHEMAS
         //
 
@@ -289,7 +315,17 @@ angular.module('toolkit.cms').controller('tkEntityController', [
             'edit': 'EDIT'
         }
 
-        var _schemaSetup = function (entity) { };
+        var _schemaSetup = function (entity) {
+
+            var defaultSchema = _schemaGet(_schema.default);
+            var dftSchemaMap = {};
+
+            $.each(defaultSchema.properties, function (idx, property) {
+                dftSchemaMap[property.name] = property;
+            });
+
+            $scope.schema = dftSchemaMap;
+        };
 
         var _schemaGet = function (type) {
 

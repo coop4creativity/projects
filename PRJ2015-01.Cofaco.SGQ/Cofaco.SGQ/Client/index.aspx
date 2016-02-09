@@ -40,36 +40,9 @@
 </head>
 <body>
     <!-- TOP-BAR -->
-    <nav class="navbar navbar-background navbar-fixed-top ng-hide" data-ng-controller="tkMenuController" data-ng-show="isLoggedUser">
-        <div class="container">
-            <div class="navbar-header">
-                <p class="navbar-text">
-                    <a href="#/home">
-                        <framework:AppName runat="server" />
-                    </a>
-                </p>
-            </div>
-            <!-- MENU -->
-            <div class="navbar-right main-menu">
-                <div class="btn-toolbar" role="toolbar" aria-label="...">
-                    <div class="btn-group" data-ng-repeat="btn in menu.items" role="group">
-                        <button data-ng-if="btn.callback != undefined" data-ng-class="['btn', 'navbar-btn', 'btn-' + btn.style, btn.__active]" type="button" data-ng-click="btn.callback()">
-                            <span data-ng-if="btn.icon != ''" data-ng-class="['glyphicon', 'glyphicon-' + btn.icon]" aria-hidden="true"></span>
-                            <span data-ng-if="btn.title != ''">{{ btn.__name }}</span>
-                            <span data-ng-if="btn.nots != ''" data-ng-class="['badge']">{{ btn.nots }}</span>
-                        </button>
-                        <a data-ng-if="btn.url != undefined" data-ng-class="['btn', 'navbar-btn', 'btn-' + btn.style, btn.__active]" href="{{ btn.url }}">
-                            <span data-ng-if="btn.icon != ''" data-ng-class="['glyphicon', 'glyphicon-' + btn.icon]" aria-hidden="true"></span>
-                            <span data-ng-if="btn.title != ''">{{ btn.__name }}</span>
-                            <span data-ng-if="btn.nots != ''" data-ng-class="['badge']">{{ btn.nots }}</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /MENU-->
-        </div>
-    </nav>
-    <!-- /TOP-BAR -->
+    <div data-ng-controller='tkNavbarController'>
+        <tk-navbar visible="isLoggedUser" affixed='config.affixed' brand='config.brand' inverse='config.inverse' menu='config.menu' navfn='config.navfn(item)' search='config.search' searchfn='config.search.fn()' />
+    </div>
     <!-- MAIN -->
     <div class="container">
         <div data-ng-view=""></div>
@@ -82,6 +55,8 @@
     <framework:Package runat="server" Name="3party:angular" Mode="HERE" MimeType="application/javascript" />
     <framework:Package runat="server" Name="toolkit:base:core" Mode="HERE" MimeType="application/javascript" />
     <!-- CLOUD RESOURCES -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-sanitize.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&libraries=drawing"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script>google.load("visualization", "1", { packages: ["corechart"] });</script>
     <script type="text/javascript">toolkit.url.Register(null, '<%= ResolveUrl("~/") %>');</script>

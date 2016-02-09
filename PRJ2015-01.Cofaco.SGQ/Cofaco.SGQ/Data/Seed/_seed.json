@@ -18,6 +18,15 @@
         }
     },
     {
+        "filename": "schema.audit.json",
+        "entity": "Toolkit.CMS: Toolkit.CMS.Model.Cluster",
+        "service": "Toolkit.CMS: Toolkit.CMS.Api.Interface.ICluster",
+        "method": {
+            "name": "Create",
+            "params": [ "Toolkit.CMS: Toolkit.CMS.Model.Cluster", "mscorlib: System.Object" ]
+        }
+    },
+    {
         "filename": "schema.metadata.json",
         "entity": "Toolkit.CMS: Toolkit.CMS.Model.Cluster",
         "service": "Toolkit.CMS: Toolkit.CMS.Api.Interface.ICluster",

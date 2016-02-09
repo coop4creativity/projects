@@ -1,20 +1,20 @@
 ﻿[
     {
-        "ref": "processo",
-        "name": "Processo",
-        "description": "Controlo do Processo de Fabrico",
+        "ref": "auditoria",
+        "name": "Auditoria",
+        "description": "Registo de auditorias",
         "contentTypes": [ ],
         "entities": [
             {
-                "ref": "process",
+                "ref": "audit",
                 "icon": "hdd",
-                "name": "Processo",
-                "description": "Gestão de Processo",
+                "name": "Auditoria",
+                "description": "Gestão de Auditorias",
                 "visibility": "UNKNOWN",
                 "api": {
                     "create": "",
                     "detail": "",
-                    "list": "cmsddl/entity-list-by-cluster/processo",
+                    "list": "cmsddl/entity-list-by-cluster/auditoria",
                     "update": "",
                     "delete": ""
                 },
