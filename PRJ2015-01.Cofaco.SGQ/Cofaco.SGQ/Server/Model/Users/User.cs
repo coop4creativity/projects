@@ -1,10 +1,10 @@
 ﻿// ============================================================================
 // Project: Cofaco SGQ
-// Name/Class: User
-// Author: João Carreiro (joao.carreiro@cybermap.pt)
-// Create date: 03/Oct/2015
+// Name/Class:
+// Author: João Carreiro (joaopaulocarreiro@gmail.com)
+// Create date: 09/Fev/2016
 // Company: Cooperativa Criativa Lda.
-// Description: User model class.
+// Description:
 // ============================================================================
 
 using Toolkit.Core.Patterns;

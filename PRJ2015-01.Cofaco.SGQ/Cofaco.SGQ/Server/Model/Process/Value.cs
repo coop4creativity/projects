@@ -1,10 +1,10 @@
 ﻿// ============================================================================
 // Project: Cofaco SGQ
-// Name/Class: Value
-// Author: João Carreiro (joao.carreiro@cybermap.pt)
-// Create date: 03/Oct/2015
+// Name/Class:
+// Author: João Carreiro (joaopaulocarreiro@gmail.com)
+// Create date: 09/Fev/2016
 // Company: Cooperativa Criativa Lda.
-// Description: Generic item value.
+// Description:
 // ============================================================================
 
 using System;

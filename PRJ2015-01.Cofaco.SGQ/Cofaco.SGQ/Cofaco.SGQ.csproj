@@ -408,9 +408,15 @@
     <Content Include="Data\Images\Icon\ms-icon-310x310.png" />
     <Content Include="Data\Images\Icon\ms-icon-70x70.png" />
     <Content Include="Data\Seed\schema.product.json" />
-    <Content Include="services-logging.config" />
-    <Content Include="services-ticker.config" />
-    <Content Include="services-localization.config" />
+    <Content Include="services-logging.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="services-ticker.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="services-localization.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="services-ims.config" />
     <Content Include="services-init.config">
       <SubType>Designer</SubType>
@@ -427,32 +433,32 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Server\API\Controllers\StoreController.cs" />
-    <Compile Include="Server\API\Controllers\ItemController.cs" />
-    <Compile Include="Server\API\Controllers\ChartController.cs" />
-    <Compile Include="Server\API\Controllers\AController.cs" />
-    <Compile Include="Server\API\Controllers\StatsController.cs" />
-    <Compile Include="Server\API\Controllers\UserController.cs" />
-    <Compile Include="Server\API\Default\SrvStore.cs" />
-    <Compile Include="Server\API\Default\SrvItem.cs" />
-    <Compile Include="Server\API\Default\SrvChart.cs" />
-    <Compile Include="Server\API\Default\SrvStats.cs" />
-    <Compile Include="Server\API\Default\SrvUser.cs" />
-    <Compile Include="Server\API\Interface\IStore.cs" />
-    <Compile Include="Server\API\Interface\IItem.cs" />
-    <Compile Include="Server\API\Interface\IChart.cs" />
-    <Compile Include="Server\API\Interface\IStats.cs" />
-    <Compile Include="Server\API\Interface\IUser.cs" />
-    <Compile Include="Server\Auth\Authorize.cs" />
-    <Compile Include="Server\Auth\AuthServerProvider.cs" />
-    <Compile Include="Server\Data\EF\Common.cs" />
-    <Compile Include="Server\Data\EF\DataContext.cs" />
-    <Compile Include="Server\Data\EF\DataContextInitializer.cs" />
-    <Compile Include="Server\Data\EF\NewDALHandler.cs" />
-    <Compile Include="Server\Data\EF\ObjSrcStringBase.cs" />
-    <Compile Include="Server\Data\EF\ObjSrcBase.cs" />
-    <Compile Include="Server\Data\EF\ObjSrcUser.cs" />
-    <Compile Include="Server\Data\EF\UserAsIdentityUser.cs" />
+    <Compile Include="Server\API\Process\StoreController.cs" />
+    <Compile Include="Server\API\Process\ItemController.cs" />
+    <Compile Include="Server\API\Reporting\ChartController.cs" />
+    <Compile Include="Server\Framework\API\AController.cs" />
+    <Compile Include="Server\API\Support\StatsController.cs" />
+    <Compile Include="Server\API\Users\UserController.cs" />
+    <Compile Include="Server\API\Process\SrvStore.cs" />
+    <Compile Include="Server\API\Process\SrvItem.cs" />
+    <Compile Include="Server\API\Reporting\SrvChart.cs" />
+    <Compile Include="Server\API\Support\SrvStats.cs" />
+    <Compile Include="Server\API\Users\SrvUser.cs" />
+    <Compile Include="Server\API\Process\IStore.cs" />
+    <Compile Include="Server\API\Process\IItem.cs" />
+    <Compile Include="Server\API\Reporting\IChart.cs" />
+    <Compile Include="Server\API\Support\IStats.cs" />
+    <Compile Include="Server\API\Users\IUser.cs" />
+    <Compile Include="Server\API\Users\Authorize.cs" />
+    <Compile Include="Server\Framework\Auth\AuthServerProvider.cs" />
+    <Compile Include="Server\Framework\Data\Common.cs" />
+    <Compile Include="Server\Framework\Data\DataContext.cs" />
+    <Compile Include="Server\Framework\Data\DataContextInitializer.cs" />
+    <Compile Include="Server\Framework\Data\NewDALHandler.cs" />
+    <Compile Include="Server\Framework\Data\ObjSrcStringBase.cs" />
+    <Compile Include="Server\Framework\Data\ObjSrcBase.cs" />
+    <Compile Include="Server\Framework\Data\ObjSrcUser.cs" />
+    <Compile Include="Server\Framework\Data\UserAsIdentityUser.cs" />
     <Compile Include="Server\Model\Audit\Answer.cs" />
     <Compile Include="Server\Model\Audit\_EFModel.cs" />
     <Compile Include="Server\Model\Audit\Question.cs" />
@@ -468,7 +474,7 @@
     <Compile Include="Server\Model\Support\_EFModel.cs" />
     <Compile Include="Server\Model\Users\User.cs" />
     <Compile Include="Server\Model\Users\_Enums.cs" />
-    <Compile Include="Server\Start\Startup.cs" />
+    <Compile Include="Server\Framework\Start\Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.config">
@@ -501,6 +507,8 @@
     <Folder Include="Client\modules\toolkit\webapi\" />
     <Folder Include="Client\modules\toolkit\webscript\" />
     <Folder Include="Data\DB\" />
+    <Folder Include="Server\API\Audit\" />
+    <Folder Include="Server\API\Product\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

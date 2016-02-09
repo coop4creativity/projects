@@ -38,7 +38,7 @@
     {
         "filename": "data.users.json",
         "entity": "Cofaco.SGQ: Cofaco.SGQ.Server.Model.Users.User",
-        "service": "Cofaco.SGQ: Cofaco.SGQ.Server.API.Interface.IUser",
+        "service": "Cofaco.SGQ: Cofaco.SGQ.Server.API.Users.IUser",
         "method": {
             "name": "Create",
             "params": [ "Cofaco.SGQ: Cofaco.SGQ.Server.Model.Users.User" ]

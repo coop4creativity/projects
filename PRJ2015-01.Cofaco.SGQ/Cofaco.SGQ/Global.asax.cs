@@ -8,7 +8,7 @@
 // ============================================================================
 
 using Toolkit.Apps.Web.Framework.Services.Interface;
-using Cofaco.SGQ.Server.Data.EF;
+using Cofaco.SGQ.Server.Framework.Data;
 using System;
 using System.IO;
 using System.Web.Routing;
