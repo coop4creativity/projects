@@ -17,7 +17,6 @@ namespace Cofaco.SGQ.Server.Model.Audit
         IID<int>,
         IVisible,
         IAuditable<string>,
-        IName<string>,
         IDescription<string>
     {
         //
@@ -40,7 +39,7 @@ namespace Cofaco.SGQ.Server.Model.Audit
         // Info.
         //
 
-        public string Name { get; set; }
+        public string Title { get; set; }
         public string Description { get; set; }
         public ICollection<Question> Questions { get; set; }
 
@@ -61,7 +60,7 @@ namespace Cofaco.SGQ.Server.Model.Audit
             // Info
             //
 
-            Name = string.Empty;
+            Title = string.Empty;
             Description = string.Empty;
             Questions = null;
 

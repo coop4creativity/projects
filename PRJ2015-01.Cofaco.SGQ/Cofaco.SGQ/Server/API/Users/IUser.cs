@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using Toolkit.Apps.Web.Framework.Services.Interface;
           
 namespace Cofaco.SGQ.Server.API.Users
-{
+{    
     public interface IUser : ICommon, IDisposable
     {
         //

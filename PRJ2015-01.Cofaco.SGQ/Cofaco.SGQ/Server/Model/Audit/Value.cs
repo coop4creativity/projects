@@ -12,9 +12,8 @@ using Toolkit.Core.Patterns;
 
 namespace Cofaco.SGQ.Server.Model.Audit
 {
-    public class Question :
+    public class Value :
         IID<int>,
-        IVisible,
         IAuditable<string>
     {
         //
@@ -37,15 +36,21 @@ namespace Cofaco.SGQ.Server.Model.Audit
         // Info.
         //
 
-        public string Text { get; set; }
-        public bool Required { get; set; }
         public TypeOfValue Type { get; set; }
+        public bool IsNull { get; set; }
+
+        public bool Bool { get; set; }
+        public string Text { get; set; }
+        public int Int { get; set; }
+        public double Float { get; set; }
+        public DateTime Date { get; set; }
+        public byte[] Blob { get; set; }
 
         //
         // CONSTRUCTORS
         //
 
-        public Question()
+        public Value()
         {
             //
             // Base
@@ -58,9 +63,15 @@ namespace Cofaco.SGQ.Server.Model.Audit
             // Info
             //
 
-            Text = string.Empty;
-            Required = true;
             Type = TypeOfValue.UNKNOWN;
+            IsNull = true;
+
+            Bool = false;
+            Text = string.Empty;
+            Int = 0;
+            Float = 0.0;
+            Date = DateTime.Now;
+            Blob = null;
 
             //
             // Audits

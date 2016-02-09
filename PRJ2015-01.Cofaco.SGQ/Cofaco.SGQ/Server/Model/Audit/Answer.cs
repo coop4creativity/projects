@@ -37,6 +37,9 @@ namespace Cofaco.SGQ.Server.Model.Audit
         // Info.
         //
 
+        public string Text { get; set; }
+        public Value Value { get; set; }
+
         //
         // CONSTRUCTORS
         //
@@ -53,7 +56,9 @@ namespace Cofaco.SGQ.Server.Model.Audit
             //
             // Info
             //
-                  
+
+            Text = string.Empty;
+            Value = null;
 
             //
             // Audits
