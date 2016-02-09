@@ -421,7 +421,6 @@
     <Content Include="Data\Seed\schema.process.json" />
     <Content Include="Data\Images\Icon\manifest.json" />
     <Content Include="Data\Seed\data.navbar.json" />
-    <Content Include="Data\Seed\data.occ.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -454,10 +453,19 @@
     <Compile Include="Server\Data\EF\ObjSrcBase.cs" />
     <Compile Include="Server\Data\EF\ObjSrcUser.cs" />
     <Compile Include="Server\Data\EF\UserAsIdentityUser.cs" />
-    <Compile Include="Server\Model\Charting\Chart.cs" />
+    <Compile Include="Server\Model\Audit\Answer.cs" />
+    <Compile Include="Server\Model\Audit\_EFModel.cs" />
+    <Compile Include="Server\Model\Audit\Question.cs" />
+    <Compile Include="Server\Model\Audit\Form.cs" />
+    <Compile Include="Server\Model\Audit\Template.cs" />
+    <Compile Include="Server\Model\Product\_EFModel.cs" />
+    <Compile Include="Server\Model\Reporting\Chart.cs" />
+    <Compile Include="Server\Model\Reporting\_EFModel.cs" />
     <Compile Include="Server\Model\Process\Value.cs" />
     <Compile Include="Server\Model\Process\Item.cs" />
+    <Compile Include="Server\Model\Process\_EFModel.cs" />
     <Compile Include="Server\Model\Support\Stats.cs" />
+    <Compile Include="Server\Model\Support\_EFModel.cs" />
     <Compile Include="Server\Model\Users\User.cs" />
     <Compile Include="Server\Model\Users\_Enums.cs" />
     <Compile Include="Server\Start\Startup.cs" />

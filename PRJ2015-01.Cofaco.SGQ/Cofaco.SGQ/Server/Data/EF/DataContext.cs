@@ -44,55 +44,23 @@ namespace Cofaco.SGQ.Server.Data.EF
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //
-            // STORE
+            // APP MODELS
             //
 
-            modelBuilder.Entity<Model.Process.Item>()
-                .ToTable("ITEM")
-                .HasKey(t => t.ID);
+            Model.Product.EFContext.OnCreateModel(modelBuilder);
+            Model.Process.EFContext.OnCreateModel(modelBuilder);
+            Model.Reporting.EFContext.OnCreateModel(modelBuilder);
+            Model.Audit.EFContext.OnCreateModel(modelBuilder);
 
             //
-            // CHARTS
-            //
-
-            modelBuilder.Entity<Model.Charting.Chart>()
-                .ToTable("CHART")
-                .HasKey(t => t.ID);
-
-            //
-            // CMS
+            // FRAMEWORK
             //
 
             Toolkit.CMS.Data.EFContext.OnCreateModel(modelBuilder);
-
-            //
-            // LOGGING
-            //
-
             Toolkit.Logging.Data.EFContext.OnCreateModel(modelBuilder);
-
-            //
-            // COMM
-            //
-
             Toolkit.Comm.Data.EFContext.OnCreateModel(modelBuilder);
-
-            //
-            // TICKER
-            //
-
             Toolkit.Ticker.Data.EFContext.OnCreateModel(modelBuilder);
-
-            //
-            // LOCALIZATION
-            //
-
             Toolkit.Localization.Data.EFContext.OnCreateModel(modelBuilder);
-
-            //
-            // IMS
-            //
-
             Toolkit.IMS.Data.EFContext.OnCreateModel(modelBuilder);
 
             //

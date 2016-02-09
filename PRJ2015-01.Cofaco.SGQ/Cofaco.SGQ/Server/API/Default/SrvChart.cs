@@ -8,7 +8,7 @@
 // ============================================================================
 
 using Cofaco.SGQ.Server.API.Interface;
-using Cofaco.SGQ.Server.Model.Charting;
+using Cofaco.SGQ.Server.Model.Reporting;
 using Toolkit.Apps.Web.Framework.Services.Default;
 
 namespace Cofaco.SGQ.Server.API.Default

@@ -7,7 +7,7 @@
 // Description: 
 // ============================================================================
 
-using Cofaco.SGQ.Server.Model.Charting;
+using Cofaco.SGQ.Server.Model.Reporting;
 using Toolkit.Apps.Web.Framework.Services.Interface;
 
 namespace Cofaco.SGQ.Server.API.Interface

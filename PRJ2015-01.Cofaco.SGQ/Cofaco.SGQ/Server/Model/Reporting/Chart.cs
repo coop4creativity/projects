@@ -10,7 +10,7 @@
 using System;
 using Toolkit.Core.Patterns;
 
-namespace Cofaco.SGQ.Server.Model.Charting
+namespace Cofaco.SGQ.Server.Model.Reporting
 {
     public class Chart :
         IID<int>,

@@ -1,27 +1,32 @@
 ﻿// ============================================================================
 // Project: Cofaco SGQ
-// Name/Class: Item
+// Name/Class: Chart
 // Author: João Carreiro (joao.carreiro@cybermap.pt)
 // Create date: 03/Oct/2015
 // Company: Cooperativa Criativa Lda.
-// Description: Generic item model.
+// Description: Charts for application.
 // ============================================================================
 
 using System;
 using Toolkit.Core.Patterns;
-using Toolkit.Core.Extensions;
 
-namespace Cofaco.SGQ.Server.Model.Process
+namespace Cofaco.SGQ.Server.Model.Audit
 {
-    public class Item : 
-        IID<int>, 
-        IAuditable<string> 
+    public class Answer :
+        IID<int>,
+        IVisible,
+        IAuditable<string>
     {
         //
-        // PROPERTIES
+        // Base
         //
 
         public int ID { get; set; }
+        public TypeOfVisibility Visibility { get; set; }
+
+        //
+        // Audit
+        //
 
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
@@ -29,32 +34,32 @@ namespace Cofaco.SGQ.Server.Model.Process
         public string ModifiedBy { get; set; }
 
         //
-        // Table related properties. Store the table 
-        // where this item belongs, and the item properties.
+        // Info.
         //
-        
-        public string Entity { get; set; }
-        public string Properties { get; set; }
 
         //
         // CONSTRUCTORS
         //
 
-        public Item()
+        public Answer()
         {
             //
-            // Generic initialization.
+            // Base
             //
 
             ID = -1;
-            AuditableExtensions.Init(this, string.Empty);
+            Visibility = TypeOfVisibility.ACTIVE;
 
             //
-            // Initialize this item specific properties.
+            // Info
+            //
+                  
+
+            //
+            // Audits
             //
 
-            Entity = string.Empty;
-            Properties = string.Empty;
+            Toolkit.Core.Extensions.AuditableExtensions.Init(this, string.Empty);
         }
     }
 }
