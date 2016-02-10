@@ -9,6 +9,8 @@
 
 using Cofaco.SGQ.Server.Model.Audit;
 using Toolkit.Apps.Web.Framework.Services.Default;
+using System.Linq;
+using System.Data.Entity;
 
 namespace Cofaco.SGQ.Server.API.Audit
 {

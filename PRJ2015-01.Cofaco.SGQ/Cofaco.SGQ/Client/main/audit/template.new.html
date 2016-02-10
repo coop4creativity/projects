@@ -83,19 +83,24 @@
                                 <h5 class="name">Informação Geral</h5>
                             </div>
                             <div class="panel-body">
-                                <div class="form-horizontal" role="form">
-                                    <!-- TITLE -->
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">Titulo</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" data-ng-model="item.title">
-                                        </div>
-                                    </div>
-                                    <!-- DESCRIPTION -->
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">Descrição</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" rows="3" data-ng-model="item.description" style="resize:none;" />
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+
+                                        <div class="form-horizontal" role="form">
+                                            <!-- TITLE -->
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Titulo</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" data-ng-model="item.title">
+                                                </div>
+                                            </div>
+                                            <!-- DESCRIPTION -->
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Descrição</label>
+                                                <div class="col-sm-9">
+                                                    <textarea class="form-control" rows="3" data-ng-model="item.description" style="resize:none;" />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -118,27 +123,27 @@
                                                     <th>Tipo</th>
                                                     <th>&nbsp;</th>
                                                 </tr>
-                                                <tr data-ng-repeat="question in item.questions">
+                                                <tr data-ng-repeat="question in item.questions | orderBy:'order'">
                                                     <td width="5%">
-                                                        {{ question.order }}
+                                                        [{{ question.id }}] {{ question.order }}
                                                     </td>
                                                     <td width="55%">
-                                                        <input type="text" class="form-control" placeholder="texto" data-ng-model="question.caption">
+                                                        <textarea rows="3" style="resize:none" class="form-control" placeholder="texto" data-ng-model="question.caption" />
                                                     </td>
                                                     <td width="20%">
-                                                        <select class="form-control" data-ng-model="question.type" data-ng-options="o.name for o in types" ng-init="item.type=types[0]" />
+                                                        <select class="form-control" data-ng-model="question.type" data-ng-options="o.val as o.name for o in types" ng-init="question.type=types[0].val" />
                                                     </td>
                                                     <td width="20%">
                                                         <div class="clearfix">
                                                             <div class="pull-right">
                                                                 <!-- Up/Down/Remove -->
-                                                                <button data-ng-class="['btn', 'btn-link']" type="button" data-ng-click="upQuestion($index)">
+                                                                <button data-ng-class="['btn', 'btn-link']" type="button" data-ng-click="upQuestion(question.order)">
                                                                     <span data-ng-class="['glyphicon', 'glyphicon-arrow-up']" aria-hidden="true"></span>
                                                                 </button>
-                                                                <button data-ng-class="['btn', 'btn-link']" type="button" data-ng-click="downQuestion($index)">
+                                                                <button data-ng-class="['btn', 'btn-link']" type="button" data-ng-click="downQuestion(question.order)">
                                                                     <span data-ng-class="['glyphicon', 'glyphicon-arrow-down']" aria-hidden="true"></span>
                                                                 </button>
-                                                                <button data-ng-class="['btn', 'btn-danger']" type="button" data-ng-click="remQuestion($index)">
+                                                                <button data-ng-class="['btn', 'btn-danger']" type="button" data-ng-click="remQuestion(question.order)">
                                                                     <span data-ng-class="['glyphicon', 'glyphicon-remove']" aria-hidden="true"></span>
                                                                 </button>
                                                             </div>
@@ -147,15 +152,14 @@
                                                 </tr>
                                             </table>
                                         </div>
+                                        <!-- ADD -->
+                                        <button data-ng-class="['btn', 'btn-default']" type="button" data-ng-click="addQuestion()">
+                                            <span data-ng-class="['glyphicon', 'glyphicon-plus']" aria-hidden="true"></span>
+                                            <span>Adicionar</span>
+                                        </button>
+                                        <!-- -->
                                     </div>
-                                </div>                                
-                                <!-- -->
-                                <button data-ng-class="['btn', 'btn-default']" type="button" data-ng-click="addQuestion()">
-                                    <span data-ng-class="['glyphicon', 'glyphicon-plus']" aria-hidden="true"></span>
-                                    <span>Adicionar</span>
-                                </button>
-                                <!-- -->
-
+                                </div>
                             </div>
                         </div>
                     </div>

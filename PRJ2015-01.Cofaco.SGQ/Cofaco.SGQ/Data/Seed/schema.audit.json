@@ -132,7 +132,7 @@
                         "isDefault": true,
                         "fields": [
                             {
-                                "name": "name",
+                                "name": "title",
                                 "displayName": "Nome"
                             },
                             {

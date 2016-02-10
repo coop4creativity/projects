@@ -15,26 +15,69 @@ app.controller('audit-template-new-controller', [
 
         var _addQuestion = function () {
 
-            $scope.item.questions.push({ caption: null, type: null, order:0 });
+            var order = $scope.item.questions.length;
+            $scope.item.questions.push({ caption: null, type: 'BOOL', order: order });
         };
 
-        var _remQuestion = function (index) {
+        var _remQuestion = function (order) {
+
+            var index = _getIndex(order);
 
             $scope.item.questions.splice(index, 1);
+
+            //
+            // Reorder, start from 0
+            //
+
+            $.each($scope.item.questions, function (idx, question) { question.order = idx; });
         };
 
-        var _upQuestion = function (index) {
+        var _upQuestion = function (order) {
 
-            $scope.item.questions.splice(index, 1);
+            if (order > 0) {
+
+                var index0 = _getIndex(order);
+                var index1 = _getIndex(order - 1);
+                _swapOrders(index0, index1);
+            }
         };
 
-        var _downQuestion = function (index) {
+        var _downQuestion = function (order) {
+            
+            if (order < $scope.item.questions.length) {
 
-            $scope.item.questions.splice(index, 1);
+                var index0 = _getIndex(order);
+                var index1 = _getIndex(order + 1);
+                _swapOrders(index0, index1);
+            }
         };
+
+        var _swapOrders = function(index0, index1) {
+
+            var orderIndex0 = $scope.item.questions[index0].order;
+            $scope.item.questions[index0].order = $scope.item.questions[index1].order;
+            $scope.item.questions[index1].order = orderIndex0;
+
+        };
+
+        var _getIndex = function (order) {
+
+            var index = -1;
+            $.each($scope.item.questions, function (idx, question) {
+
+                if (order == question.order) {
+                    index = idx;
+                    return false;
+                }
+            });
+
+            return index;
+        }
 
         $scope.addQuestion = _addQuestion;
         $scope.remQuestion = _remQuestion;
+        $scope.upQuestion = _upQuestion;
+        $scope.downQuestion = _downQuestion;
 
         //
         // CONFIG

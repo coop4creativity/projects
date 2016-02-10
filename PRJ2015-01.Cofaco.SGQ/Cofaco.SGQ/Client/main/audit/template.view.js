@@ -10,23 +10,6 @@ app.controller('audit-template-view-controller', [
     function ($scope, $location, $routeParams, tkAuthService, error, client) {
 
         //
-        // QUESTIONS
-        //
-
-        var _addQuestion = function () {
-
-            $scope.item.questions.push({ caption: null, type: null });
-        };
-
-        var _remQuestion = function (index) {
-
-            $scope.item.questions.splice(index, 1);
-        };
-
-        $scope.addQuestion = _addQuestion;
-        $scope.remQuestion = _remQuestion;
-
-        //
         // CONFIG
         //
 
@@ -39,14 +22,14 @@ app.controller('audit-template-view-controller', [
             header: {
                 name: 'Auditoria (Template)',
                 icon: 'star',
-                description: 'Construção de um novo formulário para auditorias'
+                description: 'Visualização de um formulário de auditoria'
             },
 
             //
             // API for item value.
             //
 
-            api: client.audit.template,
+            api: client.audit,
 
             //
             // User messages.
@@ -81,7 +64,7 @@ app.controller('audit-template-view-controller', [
             init: function () {
 
                 $scope.types = [];
-                client.api.types.list().then(function (result) { $scope.types = result; }, function (err) { alert(err); });
+                $scope.config.api.types.list().then(function (result) { $scope.types = result; }, function (err) { alert(err); });
             }
         };
 
@@ -93,27 +76,7 @@ app.controller('audit-template-view-controller', [
 
         var _toolbar = function () {
 
-            var list = [];
-
-            var buttonSave =
-                {
-                    kind: 'BUTTON',
-                    label: 'Guardar',
-                    thumbnail: 'ok',
-                    type: 'default',
-                    callback: _save,
-                    where: 'right'
-                };
-
-            var buttonCancel =
-                {
-                    kind: 'BUTTON',
-                    label: 'Cancelar',
-                    thumbnail: 'remove',
-                    type: 'default',
-                    callback: _cancel,
-                    where: 'right'
-                };
+            var list = [];      
 
             var buttonRefresh =
                 {
@@ -125,7 +88,7 @@ app.controller('audit-template-view-controller', [
                     where: 'right'
                 };
 
-            list.push(buttonSave, buttonCancel, buttonRefresh);
+            list.push(buttonRefresh);
             $scope.toolbar = list;
         };
 
@@ -163,9 +126,9 @@ app.controller('audit-template-view-controller', [
         var _item = function () {
 
             if (angular.isDefined($scope.id)) {
-                $scope.config.api.get($scope.id).then(function (result) {
+                $scope.config.api.template.get($scope.id).then(function (result) {
 
-                    $scope.item = $.extend(true, $scope.config.item, result);
+                    $scope.item = result;
 
                 }, function (err) { alert(err); });
             }
@@ -178,7 +141,7 @@ app.controller('audit-template-view-controller', [
 
         var _save = function () {
 
-            var promise = $scope.config.api.create($scope.item);
+            var promise = $scope.config.api.template.update($scope.item);
 
             promise.then(function (result) {
 

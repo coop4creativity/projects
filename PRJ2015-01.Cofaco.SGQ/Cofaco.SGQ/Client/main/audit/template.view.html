@@ -83,19 +83,24 @@
                                 <h5 class="name">Informação Geral</h5>
                             </div>
                             <div class="panel-body">
-                                <div class="form-horizontal" role="form">
-                                    <!-- TITLE -->
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">Titulo</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" data-ng-model="item.title">
-                                        </div>
-                                    </div>
-                                    <!-- DESCRIPTION -->
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">Descrição</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" data-ng-model="item.description">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+
+                                        <div class="form-horizontal" role="form">
+                                            <!-- TITLE -->
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Titulo</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" data-ng-model="item.title" data-ng-disabled="true">
+                                                </div>
+                                            </div>
+                                            <!-- DESCRIPTION -->
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Descrição</label>
+                                                <div class="col-sm-9">
+                                                    <textarea class="form-control" rows="3" data-ng-model="item.description" style="resize:none;" data-ng-disabled="true" />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -108,20 +113,35 @@
                                 <h5 class="name">Questões</h5>
                             </div>
                             <div class="panel-body">
-                                <div class="list-group">
-                                    <!-- QUESTION -->
-                                    <div class="list-group-item" data-ng-repeat="question in item.questions">
-                                        <div class="form-inline">
-                                            <label class="control-label">Texto</label>
-                                            <input type="text" class="form-control" placeholder="texto" data-ng-model="question.caption">
-                                            <label class="control-label">Tipo</label>
-                                            <select class="form-control" data-ng-model="item.type" data-ng-options="o for o in types" ng-init="item.type=types[0]" />
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="table-responsive" data-ng-if="item.questions.length > 0">
+                                            <table class="table table-condensed">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Texto</th>
+                                                    <th>Tipo</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                                <tr data-ng-repeat="question in item.questions | orderBy:'order'">
+                                                    <td width="5%">
+                                                        [{{ question.id }}] {{ question.order }}
+                                                    </td>
+                                                    <td width="55%">
+                                                        <textarea rows="3" style="resize:none" class="form-control" placeholder="texto" data-ng-model="question.caption" data-ng-disabled="true" />
+                                                    </td>
+                                                    <td width="20%">
+                                                        <select class="form-control" data-ng-model="question.type" data-ng-options="o.val as o.name for o in types" data-ng-disabled="true" />
+                                                    </td>
+                                                    <td width="20%">&nbsp;  
+                                                    </td>
+                                                </tr>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

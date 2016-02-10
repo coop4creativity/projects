@@ -10,9 +10,11 @@
 using System;
 using System.Collections.Generic;
 using Toolkit.Core.Patterns;
+using Toolkit.Models.Attributes;
 
 namespace Cofaco.SGQ.Server.Model.Audit
 {
+    [NavigationEntity]
     public class AuditTemplate :
         IID<int>,
         IVisible,
@@ -41,6 +43,8 @@ namespace Cofaco.SGQ.Server.Model.Audit
 
         public string Title { get; set; }
         public string Description { get; set; }
+
+        [NavigationProperty]
         public ICollection<AuditQuestion> Questions { get; set; }
 
         //

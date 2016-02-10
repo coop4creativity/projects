@@ -15,16 +15,69 @@ app.controller('audit-template-edit-controller', [
 
         var _addQuestion = function () {
 
-            $scope.item.questions.push({ caption: null, type: null });
+            var order = $scope.item.questions.length;
+            $scope.item.questions.push({ caption: null, type: 'BOOL', order: order });
         };
 
-        var _remQuestion = function (index) {
+        var _remQuestion = function (order) {
+
+            var index = _getIndex(order);
 
             $scope.item.questions.splice(index, 1);
+
+            //
+            // Reorder, start from 0
+            //
+
+            $.each($scope.item.questions, function (idx, question) { question.order = idx; });
         };
+
+        var _upQuestion = function (order) {
+
+            if (order > 0) {
+
+                var index0 = _getIndex(order);
+                var index1 = _getIndex(order - 1);
+                _swapOrders(index0, index1);
+            }
+        };
+
+        var _downQuestion = function (order) {
+
+            if (order < $scope.item.questions.length) {
+
+                var index0 = _getIndex(order);
+                var index1 = _getIndex(order + 1);
+                _swapOrders(index0, index1);
+            }
+        };
+
+        var _swapOrders = function (index0, index1) {
+
+            var orderIndex0 = $scope.item.questions[index0].order;
+            $scope.item.questions[index0].order = $scope.item.questions[index1].order;
+            $scope.item.questions[index1].order = orderIndex0;
+
+        };
+
+        var _getIndex = function (order) {
+
+            var index = -1;
+            $.each($scope.item.questions, function (idx, question) {
+
+                if (order == question.order) {
+                    index = idx;
+                    return false;
+                }
+            });
+
+            return index;
+        }
 
         $scope.addQuestion = _addQuestion;
         $scope.remQuestion = _remQuestion;
+        $scope.upQuestion = _upQuestion;
+        $scope.downQuestion = _downQuestion;
 
         //
         // CONFIG
@@ -39,14 +92,14 @@ app.controller('audit-template-edit-controller', [
             header: {
                 name: 'Auditoria (Template)',
                 icon: 'star',
-                description: 'Construção de um novo formulário para auditorias'
+                description: 'Edição de um formulário de auditoria'
             },
 
             //
             // API for item value.
             //
 
-            api: client.audit.template,
+            api: client.audit,
 
             //
             // User messages.
@@ -81,7 +134,7 @@ app.controller('audit-template-edit-controller', [
             init: function () {
 
                 $scope.types = [];
-                client.api.types.list().then(function (result) { $scope.types = result; }, function (err) { alert(err); });
+                $scope.config.api.types.list().then(function (result) { $scope.types = result; }, function (err) { alert(err); });
             }
         };
 
@@ -163,7 +216,7 @@ app.controller('audit-template-edit-controller', [
         var _item = function () {
 
             if (angular.isDefined($scope.id)) {
-                $scope.config.api.get($scope.id).then(function (result) {
+                $scope.config.api.template.get($scope.id).then(function (result) {
 
                     $scope.item = $.extend(true, $scope.config.item, result);
 
@@ -178,7 +231,7 @@ app.controller('audit-template-edit-controller', [
 
         var _save = function () {
 
-            var promise = $scope.config.api.create($scope.item);
+            var promise = $scope.config.api.template.update($scope.item);
 
             promise.then(function (result) {
 
