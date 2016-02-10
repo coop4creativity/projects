@@ -15,7 +15,7 @@ app.controller('audit-template-new-controller', [
 
         var _addQuestion = function () {
 
-            $scope.item.questions.push({ caption: null, type: null });
+            $scope.item.questions.push({ caption: null, type: null, order:0 });
         };
 
         var _remQuestion = function (index) {

@@ -37,6 +37,7 @@ namespace Cofaco.SGQ.Server.Model.Audit
         // Info.
         //
 
+        public int Order { get; set; }
         public string Caption { get; set; }
         public bool Required { get; set; }
         public TypeOfAuditAnswerValue Type { get; set; }
@@ -58,6 +59,7 @@ namespace Cofaco.SGQ.Server.Model.Audit
             // Info
             //
 
+            Order = 0;
             Caption = string.Empty;
             Required = true;
             Type = TypeOfAuditAnswerValue.UNKNOWN;

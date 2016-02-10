@@ -46,7 +46,7 @@ namespace Cofaco.SGQ.Server.Framework.API
         }
 
         [ActionName("delete")]
-        [HttpGet]
+        [HttpDelete]
         public override IHttpActionResult Delete(TID id)
         {
             return base.Delete(id);
