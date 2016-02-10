@@ -23,7 +23,7 @@ namespace Cofaco.SGQ
             // Initialize the framework.
             //
 
-            Toolkit.Apps.Web.Framework.Context.Host.Start(Server, RouteTable.Routes, "app.config", sender, e);
+            Toolkit.Apps.Web.Framework.Context.Host.Start(Server, RouteTable.Routes, "_app.config", sender, e);
 
             //
             // Set the new data directory path.

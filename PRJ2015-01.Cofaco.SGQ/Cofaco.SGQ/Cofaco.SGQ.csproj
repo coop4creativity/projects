@@ -500,7 +500,7 @@
     <Compile Include="Server\Framework\Start\Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.config">
+    <Content Include="_app.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="services-framework.config">
