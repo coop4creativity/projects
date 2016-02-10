@@ -39,9 +39,6 @@ namespace Cofaco.SGQ.Server.Model.Audit
         // Info.
         //
 
-        [JsonIgnore]
-        public AuditTemplate Template { get; set; }
-
         public ICollection<AuditAnswer> Answers { get; set; }
 
         //
@@ -61,7 +58,6 @@ namespace Cofaco.SGQ.Server.Model.Audit
             // Info
             //
 
-            Template = null;
             Answers = null;
 
             //

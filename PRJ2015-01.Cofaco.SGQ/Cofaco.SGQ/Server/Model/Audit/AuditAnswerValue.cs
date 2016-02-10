@@ -36,7 +36,6 @@ namespace Cofaco.SGQ.Server.Model.Audit
         // Info.
         //
 
-        public TypeOfAuditAnswerValue Type { get; set; }
         public bool IsNull { get; set; }
 
         public bool Bool { get; set; }
@@ -63,7 +62,6 @@ namespace Cofaco.SGQ.Server.Model.Audit
             // Info
             //
 
-            Type = TypeOfAuditAnswerValue.UNKNOWN;
             IsNull = true;
 
             Bool = false;

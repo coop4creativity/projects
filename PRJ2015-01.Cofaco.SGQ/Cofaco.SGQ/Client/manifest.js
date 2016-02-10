@@ -106,6 +106,33 @@ var appSpec = {
             params: '/:ref/:config?',
             controller: 'tkEntityController'
         },
+
+        //
+        // AUDIT
+        //
+        
+        {
+            name: 'audit/template/new',
+            template: '[MAIN]:~/audit/template.new.html',
+            controller: 'audit-template-new-controller'
+        },
+        {
+            name: 'audit/template/view',
+            template: '[MAIN]:~/audit/template.view.html',
+            params: '/:id',
+            controller: 'audit-template-view-controller'
+        },
+        {
+            name: 'audit/template/edit',
+            template: '[MAIN]:~/audit/template.edit.html',
+            params: '/:id',
+            controller: 'audit-template-edit-controller'
+        },
+
+        //
+        // REPORTING
+        //
+
         {
             name: 'chart-build',
             template: '[CHARTING]:~/view.chart-builder.html',

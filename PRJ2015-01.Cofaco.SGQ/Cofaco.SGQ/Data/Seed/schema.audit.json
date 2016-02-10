@@ -112,6 +112,98 @@
                         ]
                     }
                 ]
+            },
+            {
+                "ref": "audit-template",
+                "icon": "hdd",
+                "name": "Template (Auditoria)",
+                "description": "Conjunto de templates para questionários de auditorias",
+                "visibility": "ACTIVE",
+                "api": {
+                    "create": "audittemplate/create",
+                    "detail": "audittemplate/get",
+                    "list": "audittemplate/list",
+                    "update": "audittemplate/update",
+                    "delete": "audittemplate/delete"
+                },
+                "views": [
+                    {
+                        "name": "Default",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "name",
+                                "displayName": "Nome"
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição"
+                            }
+                        ]
+                    }
+                ],
+                "forms": [
+                    {
+                        "type": "VIEW",
+                        "url": "/audit/template/view/{ID}"
+                    },
+                    {
+                        "type": "CREATE",
+                        "url": "/audit/template/new"
+                    },
+                    {
+                        "type": "EDIT",
+                        "url": "/audit/template/edit/{ID}"
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdDate",
+                                "displayName": "Criado em",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdBy",
+                                "displayName": "Criado por",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "title",
+                                "displayName": "Titulo",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
             }   
         ]
     }

@@ -15,7 +15,7 @@
             {
                 "name": "Auditoria",
                 "style": "link",
-                "url": "/entity/audit"
+                "url": "/entity/audit-template"
             },
             {
                 "name": "Relatórios",

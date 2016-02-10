@@ -319,6 +319,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\main\audit\template.edit.html" />
+    <Content Include="Client\main\audit\template.vew.html" />
+    <Content Include="Client\main\audit\template.edit.js" />
+    <Content Include="Client\main\audit\template.view.js" />
+    <Content Include="Client\main\audit\template.new.js" />
+    <Content Include="Client\main\audit\template.new.html" />
+    <Content Include="Client\main\client.js" />
     <Content Include="Client\manifest.js" />
     <Content Include="Client\modules\toolkit\auth\auth.interceptor.js" />
     <Content Include="Client\modules\toolkit\auth\auth.js" />
@@ -442,6 +449,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\API\Audit\AuditTemplateController.cs" />
+    <Compile Include="Server\API\Audit\IAuditTemplate.cs" />
+    <Compile Include="Server\API\Audit\IAuditForm.cs" />
+    <Compile Include="Server\API\Audit\SrvAuditTemplate.cs" />
+    <Compile Include="Server\API\Audit\SrvAuditForm.cs" />
     <Compile Include="Server\API\Process\StoreController.cs" />
     <Compile Include="Server\API\Process\ItemController.cs" />
     <Compile Include="Server\API\Reporting\ChartController.cs" />
@@ -518,7 +530,6 @@
     <Folder Include="Client\modules\toolkit\webapi\" />
     <Folder Include="Client\modules\toolkit\webscript\" />
     <Folder Include="Data\DB\" />
-    <Folder Include="Server\API\Audit\" />
     <Folder Include="Server\API\Product\" />
   </ItemGroup>
   <PropertyGroup>

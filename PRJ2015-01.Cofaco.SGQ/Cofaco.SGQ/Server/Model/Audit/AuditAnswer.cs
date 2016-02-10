@@ -38,7 +38,8 @@ namespace Cofaco.SGQ.Server.Model.Audit
         // Info.
         //
 
-        public string Text { get; set; }
+        public string Caption { get; set; }
+        public TypeOfAuditAnswerValue Type { get; set; }
 
         //
         // Igonre this value for clients.
@@ -73,7 +74,8 @@ namespace Cofaco.SGQ.Server.Model.Audit
             // Info
             //
 
-            Text = string.Empty;
+            Caption = string.Empty;
+            Type = TypeOfAuditAnswerValue.UNKNOWN;
             Value = null;
             Answer = null;
 

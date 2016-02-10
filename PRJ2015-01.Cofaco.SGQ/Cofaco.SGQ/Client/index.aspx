@@ -74,7 +74,7 @@
     <framework:ScriptIncludeFolder runat="server" Folder="~/Client/support" Pattern="*.js" Mode="HERE" />
     <framework:ScriptIncludeFolder runat="server" Folder="~/Client/modules" Pattern="*.js" Mode="HERE" Recursive="true" />
     <framework:ScriptIncludeFolder runat="server" Folder="~/Client" Pattern="*.js" Mode="HERE" />
-    <framework:ScriptIncludeFolder runat="server" Folder="~/Client/main" Pattern="*.js" Mode="HERE" />
+    <framework:ScriptIncludeFolder runat="server" Folder="~/Client/main" Pattern="*.js" Mode="HERE" Recursive="true" />
 </body>
 </html>
 
