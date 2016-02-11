@@ -20,9 +20,9 @@ app.controller('process-schema-view-controller', [
             //
 
             header: {
-                name: 'Auditoria (Template)',
-                icon: 'star',
-                description: 'Visualização de um formulário de auditoria'
+                name: 'Registo (Processo)',
+                icon: 'hdd',
+                description: 'Visualização de um registo de processo'
             },
 
             //

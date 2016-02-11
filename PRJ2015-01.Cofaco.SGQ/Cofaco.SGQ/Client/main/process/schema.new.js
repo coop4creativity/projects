@@ -90,9 +90,9 @@ app.controller('process-schema-new-controller', [
             //
 
             header: {
-                name: 'Process (Registo)',
-                icon: 'star',
-                description: 'Construção de um novo registo'
+                name: 'Registo (Processo)',
+                icon: 'hdd',
+                description: 'Definição de um novo registo de processo'
             },
 
             //

@@ -110,7 +110,7 @@
                         <!-- QUESTIONS -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h5 class="name">Questões</h5>
+                                <h5 class="name">Propriedades</h5>
                             </div>
                             <div class="panel-body">
                                 <div class="row">
@@ -125,7 +125,7 @@
                                                 </tr>
                                                 <tr data-ng-repeat="property in item.properties | orderBy:'order'">
                                                     <td width="5%">
-                                                        [{{ property.id }}] {{ property.order }}
+                                                        {{ property.order }}
                                                     </td>
                                                     <td width="55%">
                                                         <input type="text" class="form-control" placeholder="texto" data-ng-model="property.name" data-ng-disabled="true" />
@@ -133,7 +133,8 @@
                                                     <td width="20%">
                                                         <select class="form-control" data-ng-model="property.type" data-ng-options="o.val as o.name for o in types" data-ng-disabled="true" />
                                                     </td>
-                                                    <td width="20%">&nbsp;  
+                                                    <td width="20%">
+                                                        &nbsp;
                                                     </td>
                                                 </tr>
                                             </table>

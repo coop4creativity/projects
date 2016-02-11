@@ -90,9 +90,9 @@ app.controller('process-schema-edit-controller', [
             //
 
             header: {
-                name: 'Auditoria (Template)',
-                icon: 'star',
-                description: 'Edição de um formulário de auditoria'
+                name: 'Registo (Processo)',
+                icon: 'hdd',
+                description: 'Edição de um registo de processo'
             },
 
             //
@@ -231,7 +231,7 @@ app.controller('process-schema-edit-controller', [
 
         var _save = function () {
 
-            var promise = $scope.config.api.dll.update($scope.item);
+            var promise = $scope.config.api.ddl.update($scope.item);
 
             promise.then(function (result) {
 
