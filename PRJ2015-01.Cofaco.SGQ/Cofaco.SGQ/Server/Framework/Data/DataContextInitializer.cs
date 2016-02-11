@@ -7,11 +7,12 @@
 // Description: Data initializer.
 // ============================================================================
 
+using Cofaco.SGQ.Migrations;
 using System;
 namespace Cofaco.SGQ.Server.Framework.Data
 {
-    public class DataContextInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<DataContext>
-    //public class DataContextInitializer : System.Data.Entity.DropCreateDatabaseAlways<DataContext>
+    //public class DataContextInitializer : System.Data.Entity.MigrateDatabaseToLatestVersion<DataContext, Configuration>
+    public class DataContextInitializer : System.Data.Entity.DropCreateDatabaseAlways<DataContext>
     {
         //
         // PROPERTIES

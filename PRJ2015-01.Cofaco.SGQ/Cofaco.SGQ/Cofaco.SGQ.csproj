@@ -470,6 +470,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602110916447_baseline.cs" />
+    <Compile Include="Migrations\201602110916447_baseline.Designer.cs">
+      <DependentUpon>201602110916447_baseline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server\API\Audit\AuditTemplateController.cs" />
     <Compile Include="Server\API\Audit\IAuditTemplate.cs" />
@@ -559,6 +564,11 @@
     <Folder Include="Client\modules\toolkit\webscript\" />
     <Folder Include="Data\DB\" />
     <Folder Include="Server\API\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602110916447_baseline.resx">
+      <DependentUpon>201602110916447_baseline.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

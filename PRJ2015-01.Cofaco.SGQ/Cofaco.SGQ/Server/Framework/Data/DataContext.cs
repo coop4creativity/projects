@@ -7,6 +7,7 @@
 // Description: Data context class.
 // ============================================================================
 
+using Cofaco.SGQ.Migrations;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Data.Entity;
@@ -28,7 +29,8 @@ namespace Cofaco.SGQ.Server.Framework.Data
             // Set the initializer for the database.
             //
 
-            Database.SetInitializer<DataContext>(new DataContextInitializer(seedHandler));
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Configuration>()); 
+            // Database.SetInitializer<DataContext>(new DataContextInitializer(seedHandler));
 
             //
             // Ensure the the DLL is copied to the target bin folder.
