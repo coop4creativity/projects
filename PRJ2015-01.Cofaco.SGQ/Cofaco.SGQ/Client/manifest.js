@@ -130,6 +130,28 @@ var appSpec = {
         },
 
         //
+        // PROCESS
+        //
+
+        {
+            name: 'process/schema/new',
+            template: '[MAIN]:~/process/schema.new.html',
+            controller: 'process-schema-new-controller'
+        },
+        {
+            name: 'process/schema/view',
+            template: '[MAIN]:~/process/schema.view.html',
+            params: '/:id',
+            controller: 'process-schema-view-controller'
+        },
+        {
+            name: 'process/schema/edit',
+            template: '[MAIN]:~/process/schema.edit.html',
+            params: '/:id',
+            controller: 'process-schema-edit-controller'
+        },
+
+        //
         // REPORTING
         //
 

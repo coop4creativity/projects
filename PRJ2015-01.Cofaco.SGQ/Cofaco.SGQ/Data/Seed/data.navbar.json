@@ -10,7 +10,7 @@
             {
                 "name": "Processo",
                 "style": "link",
-                "url": "/entity/process"
+                "url": "/entity/process-entity"
             },
             {
                 "name": "Auditoria",

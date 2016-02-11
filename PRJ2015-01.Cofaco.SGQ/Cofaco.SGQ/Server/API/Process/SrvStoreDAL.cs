@@ -15,7 +15,7 @@ using Cofaco.SGQ.Server.Model.Process;
 
 namespace Cofaco.SGQ.Server.API.Process
 {
-    public class SrvStore : ACommon, IStore
+    public class SrvStoreDAL : ACommon, IStoreDAL
     {
         //
         // Item storage service.
@@ -93,12 +93,12 @@ namespace Cofaco.SGQ.Server.API.Process
         // HELPERS
         //
 
-        private IQueryable<Item> _GetEntitySet(string entity, object ctx)
+        private IQueryable<ProcessItem> _GetEntitySet(string entity, object ctx)
         {
             return Srv.Queryable(ctx).Where(item => item.Entity.Equals(entity));
         }
 
-        private Value _Item2Value(Item item)
+        private Value _Item2Value(ProcessItem item)
         {
             Value val = new Value();
 
@@ -121,9 +121,9 @@ namespace Cofaco.SGQ.Server.API.Process
             return val;
         }
 
-        private Item _Value2Item(Value val, string entity)
+        private ProcessItem _Value2Item(Value val, string entity)
         {
-            Item item = new Item();
+            ProcessItem item = new ProcessItem();
             
             //
             // Common properties.

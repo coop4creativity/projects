@@ -9,14 +9,11 @@
 
 using Cofaco.SGQ.Server.Model.Process;
 using System.Collections.Generic;
-using System.Linq;
 using Toolkit.Apps.Web.Framework.Services.Interface;
-using System;
-using Toolkit.Core.Patterns;
 
 namespace Cofaco.SGQ.Server.API.Process
 {
-    public interface IStore : ICommon
+    public interface IStoreDAL : ICommon
     {
         //
         // The storage service. Use this

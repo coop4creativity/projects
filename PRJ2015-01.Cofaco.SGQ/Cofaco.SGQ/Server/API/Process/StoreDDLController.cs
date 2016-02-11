@@ -12,5 +12,5 @@ using Cofaco.SGQ.Server.Model.Process;
 
 namespace Cofaco.SGQ.Server.API.Process
 {
-    public class ItemController : AController<ProcessItem, int, IItem> { }
+    public class StoreDDLController : AController<ProcessEntity, int, IStoreDDL> { }
 }

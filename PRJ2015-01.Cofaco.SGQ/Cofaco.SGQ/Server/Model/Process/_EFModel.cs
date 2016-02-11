@@ -15,7 +15,10 @@ namespace Cofaco.SGQ.Server.Model.Process
     {
         public static void OnCreateModel(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Model.Process.Item>().ToTable("PROCESS_ITEM").HasKey(t => t.ID);
+            modelBuilder.Entity<Model.Process.ProcessEntity>().ToTable("PROCESS_ENTITY").HasKey(t => t.ID);
+            modelBuilder.Entity<Model.Process.ProcessEntityProperty>().ToTable("PROCESS_ENTITY_PROPERTY").HasKey(t => t.ID);
+
+            modelBuilder.Entity<Model.Process.ProcessItem>().ToTable("PROCESS_ITEM").HasKey(t => t.ID);
         }
     }
 }

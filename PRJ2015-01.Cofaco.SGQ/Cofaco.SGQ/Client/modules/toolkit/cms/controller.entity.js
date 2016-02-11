@@ -50,6 +50,12 @@ angular.module('toolkit.cms').controller('tkEntityController', [
         // CALLBACKS
         //
 
+        var _link = function (item) {
+
+            var url = _formGetUrl(_form.link);
+            $location.path(url.replace('{ID}', item.id));
+        }
+
         var _detail = function (item) {
 
             var url = _formGetUrl(_form.view);
@@ -223,13 +229,20 @@ angular.module('toolkit.cms').controller('tkEntityController', [
 
         var _toolbarItem = function (entity) {
 
-            var buttonDetail =
+            var buttonLink =
                 {
                     label: '',
                     thumbnail: 'link',
                     type: 'default',
-                    callback: _detail
+                    callback: _link
+                };
 
+            var buttonDetail =
+                {
+                    label: '',
+                    thumbnail: 'eye-open',
+                    type: 'default',
+                    callback: _detail
                 };
 
             var buttonProperties =
@@ -257,6 +270,8 @@ angular.module('toolkit.cms').controller('tkEntityController', [
                 };
 
             var toolbar = [];
+
+            toolbar = _formHas(_form.link) ? [].concat(toolbar, buttonLink) : toolbar;
 
             toolbar = _formHas(_form.view) ? [].concat(toolbar, buttonDetail) : toolbar;
 
@@ -290,7 +305,7 @@ angular.module('toolkit.cms').controller('tkEntityController', [
             if (angular.isDefined(type)) {
                 output = type.trim().indexOf("IMAGE-URL") == 0;
             }
-            
+
             return output;
         }
 
@@ -357,7 +372,8 @@ angular.module('toolkit.cms').controller('tkEntityController', [
         var _form = {
             'create': 'CREATE',
             'view': 'VIEW',
-            'edit': 'EDIT'
+            'edit': 'EDIT',
+            'link': 'LINK'
         }
 
         var _formSetup = function (entity) { };

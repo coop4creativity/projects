@@ -19,7 +19,7 @@ namespace Cofaco.SGQ.Server.API.Process
     // We named it 'id' so that it can match the routing defined.
     //
 
-    public class StoreController : AServiceWrapperController<IStore>
+    public class StoreDALController : AServiceWrapperController<IStoreDAL>
     {
         [ActionName("create")]
         [HttpPost]

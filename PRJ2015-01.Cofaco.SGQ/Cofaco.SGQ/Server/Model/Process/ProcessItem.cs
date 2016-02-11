@@ -7,30 +7,21 @@
 // Description:
 // ============================================================================
 
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using Toolkit.Core.Patterns;
-using Toolkit.Models.Attributes;
+using Toolkit.Core.Extensions;
 
-namespace Cofaco.SGQ.Server.Model.Audit
+namespace Cofaco.SGQ.Server.Model.Process
 {
-    [NavigationEntity]
-    public class AuditForm :
-        IID<int>,
-        IVisible,
-        IAuditable<string>
+    public class ProcessItem : 
+        IID<int>, 
+        IAuditable<string> 
     {
         //
-        // Base
+        // PROPERTIES
         //
 
         public int ID { get; set; }
-        public TypeOfVisibility Visibility { get; set; }
-
-        //
-        // Audit
-        //
 
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
@@ -38,36 +29,32 @@ namespace Cofaco.SGQ.Server.Model.Audit
         public string ModifiedBy { get; set; }
 
         //
-        // Info.
+        // Table related properties. Store the table 
+        // where this item belongs, and the item properties.
         //
-
-        [NavigationProperty]
-        public ICollection<AuditAnswer> Answers { get; set; }
+        
+        public string Entity { get; set; }
+        public string Properties { get; set; }
 
         //
         // CONSTRUCTORS
         //
 
-        public AuditForm()
+        public ProcessItem()
         {
             //
-            // Base
+            // Generic initialization.
             //
 
             ID = -1;
-            Visibility = TypeOfVisibility.ACTIVE;
+            AuditableExtensions.Init(this, string.Empty);
 
             //
-            // Info
+            // Initialize this item specific properties.
             //
 
-            Answers = null;
-
-            //
-            // Audits
-            //
-
-            Toolkit.Core.Extensions.AuditableExtensions.Init(this, string.Empty);
+            Entity = string.Empty;
+            Properties = string.Empty;
         }
     }
 }

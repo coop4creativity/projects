@@ -63,7 +63,7 @@ app.factory('client', ['$q', '$http', function ($q, $http) {
                         { name: 'Sim/Não', val: 'BOOL' },
                         { name: 'Texto', val: 'TEXT' },
                         { name: 'Inteiro', val: 'INT' },
-                        { name: 'Decimal', val: 'FLOT' },
+                        { name: 'Decimal', val: 'FLOAT' },
                         { name: 'Data', val: 'DATE' }
                     ];
                 });
@@ -73,6 +73,17 @@ app.factory('client', ['$q', '$http', function ($q, $http) {
 
     var _audit = {
         'template': _audit_template,
+        'types': _audit_answer_types()
+    };
+
+    //
+    // PROCESS
+    // 
+
+    var _process_ddl = _get_standard_protocol(_baseUrl + 'storeddl/');
+
+    var _process = {
+        'ddl': _process_ddl,
         'types': _audit_answer_types()
     };
 
@@ -103,6 +114,7 @@ app.factory('client', ['$q', '$http', function ($q, $http) {
 
     return {
         'audit': _audit,
+        'process': _process,
         'user': _user
     };
 

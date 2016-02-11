@@ -6,17 +6,17 @@
         "contentTypes": [ ],
         "entities": [
             {
-                "ref": "process",
+                "ref": "process-entity",
                 "icon": "hdd",
-                "name": "Processo",
-                "description": "Gestão de Processo",
-                "visibility": "UNKNOWN",
+                "name": "Registos (Processo)",
+                "description": "Conjunto de registos relacionados com o processo de fabrico",
+                "visibility": "ACTIVE",
                 "api": {
-                    "create": "",
-                    "detail": "",
-                    "list": "cmsddl/entity-list-by-cluster/processo",
-                    "update": "",
-                    "delete": ""
+                    "create": "storeddl/create",
+                    "detail": "storeddl/get",
+                    "list": "storeddl/list",
+                    "update": "storeddl/update",
+                    "delete": "storeddl/delete"
                 },
                 "views": [
                     {
@@ -24,7 +24,7 @@
                         "isDefault": true,
                         "fields": [
                             {
-                                "name": "name",
+                                "name": "title",
                                 "displayName": "Nome"
                             },
                             {
@@ -37,15 +37,15 @@
                 "forms": [
                     {
                         "type": "VIEW",
-                        "url": "/entity/{ID}"
+                        "url": "/process/schema/view/{ID}"
                     },
                     {
                         "type": "CREATE",
-                        "url": "/entity/{ID}"
+                        "url": "/process/schema/new"
                     },
                     {
                         "type": "EDIT",
-                        "url": "/entity/{ID}"
+                        "url": "/process/schema/edit/{ID}"
                     }
                 ],
                 "schemas": [
@@ -78,35 +78,19 @@
                                 "editable": false
                             },
                             {
-                                "name": "ref",
-                                "displayName": "Referência",
+                                "name": "title",
+                                "displayName": "Titulo",
                                 "description": "",
                                 "type": "TEXT",
                                 "required": true,
                                 "editable": false
                             },
                             {
-                                "name": "name",
-                                "displayName": "Nome",
-                                "description": "",
-                                "type": "TEXT",
-                                "required": true,
-                                "editable": true
-                            },
-                            {
-                                "name": "icon",
-                                "displayName": "Icon",
-                                "description": "",
-                                "type": "TEXT",
-                                "required": true,
-                                "editable": true
-                            },
-                            {
                                 "name": "description",
                                 "displayName": "Descrição",
                                 "description": "",
-                                "type": "TEXT-BLOCK",
-                                "required": false,
+                                "type": "TEXT",
+                                "required": true,
                                 "editable": true
                             }
                         ]

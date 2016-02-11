@@ -12,5 +12,5 @@ using Toolkit.Apps.Web.Framework.Services.Interface;
 
 namespace Cofaco.SGQ.Server.API.Process
 {
-    public interface IItem : IContextObjectSourceWrapper<Item, int> { }
+    public interface IItem : IContextObjectSourceWrapper<ProcessItem, int> { }
 }

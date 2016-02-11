@@ -1,0 +1,170 @@
+﻿<div class="page">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+
+                <!-- HEADER -->
+                <div class="panel-heading">
+                    <h3 class="name"><span data-ng-if="page.icon != ''" data-ng-class="['glyphicon', 'glyphicon-' + page.icon]" aria-hidden="true"></span><span data-ng-if="page.icon != ''">&nbsp;</span>{{ page.name }}</h3>
+                    <h5 class="name">{{ page.description }}</h5>
+                </div>
+
+                <!-- TOOLBAR -->
+                <div class="panel-heading">
+                    <div class="clearfix toolbar">
+                        <div class="pull-left">
+                            <div class="form-inline" role="form" aria-label="...">
+                                <div class="form-group" data-ng-repeat="btn in toolbar | filter:{ where: 'left' }" data-ng-switch="btn.kind">
+                                    <!-- BUTTON -->
+                                    <button data-ng-switch-when="BUTTON" data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback()">
+                                        <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
+                                        <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
+                                    </button>
+                                    <!-- SEARCH-BOX -->
+                                    <div data-ng-switch-when="SEARCH">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="{{ btn.placeholder }}" ng-model="$parent.$parent.filterStr">
+                                        </div>
+                                    </div>
+                                    <!-- SELECTORS -->
+                                    <div data-ng-switch-when="SELECT">
+                                        <div class="input-group">
+                                            <div data-ng-if="btn.label != ''" class="input-group-addon">{{ btn.label }}</div>
+                                            <select class="form-control" data-ng-model="btn.selected" data-ng-change="btn.callback()">
+                                                <option data-ng-repeat="opt in btn.source.items" value="{{ opt[btn.source.field.value] }}" data-ng-selected="btn.selected == opt[btn.source.field.value]">{{ opt[btn.source.field.name] }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <div class="form-inline" role="form" aria-label="...">
+                                <div class="form-group" data-ng-repeat="btn in toolbar | filter:{ where: 'right' }" data-ng-switch="btn.kind">
+                                    <!-- BUTTON -->
+                                    <button data-ng-switch-when="BUTTON" data-ng-class="['btn', 'btn-' + btn.type]" type="button" data-ng-click="btn.callback()">
+                                        <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
+                                        <span data-ng-if="btn.label != ''">{{ btn.label }}</span>
+                                    </button>
+                                    <!-- SEARCH-BOX -->
+                                    <div data-ng-switch-when="SEARCH">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span data-ng-class="['glyphicon', 'glyphicon-' + btn.thumbnail]" aria-hidden="true"></span>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="{{ btn.placeholder }}" ng-model="$parent.$parent.filterStr">
+                                        </div>
+                                    </div>
+                                    <!-- SELECTORS -->
+                                    <div data-ng-switch-when="SELECT">
+                                        <div class="input-group">
+                                            <div data-ng-if="btn.label != ''" class="input-group-addon">{{ btn.label }}</div>
+                                            <select class="form-control" data-ng-model="btn.selected" data-ng-change="btn.callback()">
+                                                <option data-ng-repeat="opt in btn.source.items" value="{{ opt[btn.source.field.value] }}" data-ng-selected="btn.selected == opt[btn.source.field.value]">{{ opt[btn.source.field.name] }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORM -->
+                <div class="panel-body">
+                    <div class="col-md-12 form">
+
+                        <!-- GENERAL INFO -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5 class="name">Informação Geral</h5>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+
+                                        <div class="form-horizontal" role="form">
+                                            <!-- TITLE -->
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Titulo</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" data-ng-model="item.title">
+                                                </div>
+                                            </div>
+                                            <!-- DESCRIPTION -->
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Descrição</label>
+                                                <div class="col-sm-9">
+                                                    <textarea class="form-control" rows="3" data-ng-model="item.description" style="resize:none;" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- QUESTIONS -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5 class="name">Questões</h5>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="table-responsive" data-ng-if="item.properties.length > 0">
+                                            <table class="table table-condensed">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Nome</th>
+                                                    <th>Tipo</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                                <tr data-ng-repeat="property in item.properties | orderBy:'order'">
+                                                    <td width="5%">
+                                                        [{{ property.id }}] {{ property.order }}
+                                                    </td>
+                                                    <td width="55%">
+                                                        <input type="text" class="form-control" placeholder="texto" data-ng-model="property.name" />
+                                                    </td>
+                                                    <td width="20%">
+                                                        <select class="form-control" data-ng-model="property.type" data-ng-options="o.val as o.name for o in types" />
+                                                    </td>
+                                                    <td width="20%">
+                                                        <div class="clearfix">
+                                                            <div class="pull-right">
+                                                                <!-- Up/Down/Remove -->
+                                                                <button data-ng-class="['btn', 'btn-link']" type="button" data-ng-click="upProperty(property.order)">
+                                                                    <span data-ng-class="['glyphicon', 'glyphicon-arrow-up']" aria-hidden="true"></span>
+                                                                </button>
+                                                                <button data-ng-class="['btn', 'btn-link']" type="button" data-ng-click="downProperty(property.order)">
+                                                                    <span data-ng-class="['glyphicon', 'glyphicon-arrow-down']" aria-hidden="true"></span>
+                                                                </button>
+                                                                <button data-ng-class="['btn', 'btn-danger']" type="button" data-ng-click="remProperty(property.order)">
+                                                                    <span data-ng-class="['glyphicon', 'glyphicon-remove']" aria-hidden="true"></span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!-- ADD -->
+                                        <button data-ng-class="['btn', 'btn-default']" type="button" data-ng-click="addProperty()">
+                                            <span data-ng-class="['glyphicon', 'glyphicon-plus']" aria-hidden="true"></span>
+                                            <span>Adicionar</span>
+                                        </button>
+                                        <!-- -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

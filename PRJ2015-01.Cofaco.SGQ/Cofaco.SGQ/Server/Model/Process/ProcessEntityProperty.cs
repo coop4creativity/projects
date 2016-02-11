@@ -13,7 +13,7 @@ using Toolkit.Core.Extensions;
 
 namespace Cofaco.SGQ.Server.Model.Process
 {
-    public class Item : 
+    public class ProcessEntityProperty : 
         IID<int>, 
         IAuditable<string> 
     {
@@ -32,15 +32,17 @@ namespace Cofaco.SGQ.Server.Model.Process
         // Table related properties. Store the table 
         // where this item belongs, and the item properties.
         //
-        
-        public string Entity { get; set; }
-        public string Properties { get; set; }
+
+        public int Order { get; set; }
+        public string Name { get; set; }
+        public string DisplayName { get; set; }
+        public TypeOfPropertyValue Type {get;set;}
 
         //
         // CONSTRUCTORS
         //
 
-        public Item()
+        public ProcessEntityProperty()
         {
             //
             // Generic initialization.
@@ -53,8 +55,10 @@ namespace Cofaco.SGQ.Server.Model.Process
             // Initialize this item specific properties.
             //
 
-            Entity = string.Empty;
-            Properties = string.Empty;
+            Order = 0;
+            Name = string.Empty;
+            DisplayName = string.Empty;
+            Type = TypeOfPropertyValue.UNKNOWN;
         }
     }
 }

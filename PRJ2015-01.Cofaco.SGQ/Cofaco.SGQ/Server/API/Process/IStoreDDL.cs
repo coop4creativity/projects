@@ -1,16 +1,16 @@
 ﻿// ============================================================================
 // Project: Cofaco SGQ
-// Name/Class: 
+// Name/Class: IStore
 // Author: João Carreiro (joao.carreiro@cybermap.pt)
 // Create date: 03/Oct/2015
 // Company: Cooperativa Criativa Lda.
-// Description: 
+// Description: Item store service contract.
 // ============================================================================
 
-using Cofaco.SGQ.Server.Framework.API;
 using Cofaco.SGQ.Server.Model.Process;
+using Toolkit.Apps.Web.Framework.Services.Interface;
 
 namespace Cofaco.SGQ.Server.API.Process
 {
-    public class ItemController : AController<ProcessItem, int, IItem> { }
+    public interface IStoreDDL : IContextObjectSourceWrapper<ProcessEntity, int> { }
 }
