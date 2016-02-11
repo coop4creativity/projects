@@ -399,6 +399,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Data\Seed\schema.audit.json" />
+    <None Include="Properties\PublishProfiles\Azure.pubxml" />
+    <None Include="Properties\PublishProfiles\cofaco-sgq.pubxml" />
     <None Include="Properties\PublishProfiles\LOCALE-FILESYSTEM.pubxml" />
     <None Include="Web.Deploy [DEBUG].config">
       <DependentUpon>Web.config</DependentUpon>

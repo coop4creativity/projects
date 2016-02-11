@@ -10,7 +10,8 @@
 using System;
 namespace Cofaco.SGQ.Server.Framework.Data
 {
-    public class DataContextInitializer : System.Data.Entity.DropCreateDatabaseAlways<DataContext>
+    public class DataContextInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<DataContext>
+    //public class DataContextInitializer : System.Data.Entity.DropCreateDatabaseAlways<DataContext>
     {
         //
         // PROPERTIES
