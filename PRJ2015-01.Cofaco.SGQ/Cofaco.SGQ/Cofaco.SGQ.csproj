@@ -357,6 +357,9 @@
     <Content Include="Client\modules\toolkit\cms\service.ddl.js" />
     <Content Include="Client\modules\toolkit\comm\service.comm.js" />
     <Content Include="Client\modules\toolkit\ims\navigation\controller.menu.js" />
+    <Content Include="Client\modules\toolkit\ims\navigation\controller.navbar.js" />
+    <Content Include="Client\modules\toolkit\ims\navigation\directive.navbar.css" />
+    <Content Include="Client\modules\toolkit\ims\navigation\directive.navbar.js" />
     <Content Include="Client\modules\toolkit\ims\navigation\service.menu.js" />
     <Content Include="Client\modules\toolkit\ims\navigation\view.menu.css" />
     <Content Include="Client\modules\toolkit\localization\service.locale.js" />

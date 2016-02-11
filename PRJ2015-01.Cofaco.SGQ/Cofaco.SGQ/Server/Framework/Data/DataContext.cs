@@ -30,7 +30,7 @@ namespace Cofaco.SGQ.Server.Framework.Data
             //
 
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Configuration>()); 
-            // Database.SetInitializer<DataContext>(new DataContextInitializer(seedHandler));
+            //Database.SetInitializer<DataContext>(new DataContextInitializer(seedHandler));
 
             //
             // Ensure the the DLL is copied to the target bin folder.

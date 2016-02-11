@@ -20,7 +20,7 @@ namespace Cofaco.SGQ.Migrations
         }
 
         protected override void Seed(Cofaco.SGQ.Server.Framework.Data.DataContext context)
-        {
+        {            
             if (null != Toolkit.Apps.Web.Framework.Context.Host.AppContext)
             {
                 Toolkit.Apps.Web.Framework.Context.Host.AppContext.Services.Get<ISeed>().Import(context);
