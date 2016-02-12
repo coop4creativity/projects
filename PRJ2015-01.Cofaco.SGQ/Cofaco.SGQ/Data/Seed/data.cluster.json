@@ -358,6 +358,296 @@
                 ]
             },
             {
+                "ref": "__product",
+                "icon": "hdd",
+                "name": "Produto",
+                "description": "Gestão de Produto",
+                "visibility": "UNKNOWN",
+                "api": {
+                    "create": "",
+                    "detail": "cmsddl/entity-get",
+                    "list": "cmsddl/entity-list-by-cluster/product",
+                    "update": "",
+                    "delete": ""
+                },
+                "views": [
+                    {
+                        "name": "Default",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "name",
+                                "displayName": "Nome"
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição"
+                            }
+                        ]
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdDate",
+                                "displayName": "Criado em",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdBy",
+                                "displayName": "Criado por",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "ref",
+                                "displayName": "Referência",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "icon",
+                                "displayName": "Icon",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": false,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ref": "__process",
+                "icon": "hdd",
+                "name": "Processo",
+                "description": "Gestão de Processo",
+                "visibility": "UNKNOWN",
+                "api": {
+                    "create": "",
+                    "detail": "cmsddl/entity-get",
+                    "list": "cmsddl/entity-list-by-cluster/process",
+                    "update": "",
+                    "delete": ""
+                },
+                "views": [
+                    {
+                        "name": "Default",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "name",
+                                "displayName": "Nome"
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição"
+                            }
+                        ]
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdDate",
+                                "displayName": "Criado em",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdBy",
+                                "displayName": "Criado por",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "ref",
+                                "displayName": "Referência",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "icon",
+                                "displayName": "Icon",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": false,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ref": "__audit",
+                "icon": "hdd",
+                "name": "Auditoria",
+                "description": "Gestão de formulários",
+                "visibility": "UNKNOWN",
+                "api": {
+                    "create": "",
+                    "detail": "cmsddl/entity-get",
+                    "list": "cmsddl/entity-list-by-cluster/audit",
+                    "update": "",
+                    "delete": ""
+                },
+                "views": [
+                    {
+                        "name": "Default",
+                        "isDefault": true,
+                        "fields": [
+                            {
+                                "name": "name",
+                                "displayName": "Nome"
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição"
+                            }
+                        ]
+                    }
+                ],
+                "schemas": [
+                    {
+                        "type": "DEFAULT",
+                        "properties": [
+                            {
+                                "name": "id",
+                                "isKey": true,
+                                "displayName": "ID",
+                                "description": "",
+                                "type": "NUMBER",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdDate",
+                                "displayName": "Criado em",
+                                "description": "",
+                                "type": "DATETIME",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "createdBy",
+                                "displayName": "Criado por",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "ref",
+                                "displayName": "Referência",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": false
+                            },
+                            {
+                                "name": "name",
+                                "displayName": "Nome",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "icon",
+                                "displayName": "Icon",
+                                "description": "",
+                                "type": "TEXT",
+                                "required": true,
+                                "editable": true
+                            },
+                            {
+                                "name": "description",
+                                "displayName": "Descrição",
+                                "description": "",
+                                "type": "TEXT-BLOCK",
+                                "required": false,
+                                "editable": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ref": "users",
+        "name": "Utilizadores",
+        "description": "Informação relativa aos utilizadores do sistema",
+        "contentTypes": [ ],
+        "entities": [
+            {
                 "ref": "users",
                 "icon": "user",
                 "name": "Utilizadores",
@@ -513,7 +803,29 @@
                         ]
                     }
                 ]
-            },
+            }
+        ]
+    },
+    {
+        "ref": "product",
+        "name": "Produto",
+        "description": "Conjunto de registos relativos ao produto final",
+        "contentTypes": [ ],
+        "entities": [ ]
+    },
+    {
+        "ref": "process",
+        "name": "Processo",
+        "description": "Conjunto de registos relativos ao processo de fabrico",
+        "contentTypes": [ ],
+        "entities": [ ]
+    },
+    {
+        "ref": "reporting",
+        "name": "Relatórios",
+        "description": "Conjunto de registos relativos a geração de relatórios",
+        "contentTypes": [ ],
+        "entities": [
             {
                 "ref": "charts",
                 "icon": "hdd",
@@ -547,7 +859,7 @@
                     {
                         "type": "CREATE",
                         "url": "/chart-build"
-                    },                                        
+                    },
                     {
                         "type": "VIEW",
                         "url": "/chart-play/{ID}"
@@ -619,5 +931,12 @@
                 ]
             }
         ]
+    },
+    {
+        "ref": "audit",
+        "name": "Auditoria",
+        "description": "Conjunto de definição de questionários para auditorias",
+        "contentTypes": [ ],
+        "entities": [ ]
     }
 ]

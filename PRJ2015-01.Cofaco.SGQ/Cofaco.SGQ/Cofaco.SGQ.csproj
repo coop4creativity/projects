@@ -319,6 +319,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\startup.aspx" />
     <Content Include="Client\main\audit\form.edit.html" />
     <Content Include="Client\main\audit\form.edit.js" />
     <Content Include="Client\main\audit\template.edit.html" />
@@ -401,7 +402,8 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Data\Seed\schema.audit.json" />
+    <Content Include="Data\Seed\_seed.json" />
+    <Content Include="Data\Seed\data.cluster.json" />
     <None Include="Properties\PublishProfiles\Azure.pubxml" />
     <None Include="Properties\PublishProfiles\cofaco-sgq.pubxml" />
     <None Include="Properties\PublishProfiles\LOCALE-FILESYSTEM.pubxml" />
@@ -448,7 +450,6 @@
     <Content Include="Data\Images\Icon\ms-icon-150x150.png" />
     <Content Include="Data\Images\Icon\ms-icon-310x310.png" />
     <Content Include="Data\Images\Icon\ms-icon-70x70.png" />
-    <Content Include="Data\Seed\schema.product.json" />
     <Content Include="services-logging.config">
       <SubType>Designer</SubType>
     </Content>
@@ -462,10 +463,7 @@
     <Content Include="services-init.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Data\Seed\_seed.json" />
-    <Content Include="Data\Seed\data.users.json" />
-    <Content Include="Data\Seed\schema.metadata.json" />
-    <Content Include="Data\Seed\schema.process.json" />
+    <Content Include="Data\Seed\data.user.json" />
     <Content Include="Data\Images\Icon\manifest.json" />
     <Content Include="Data\Seed\data.navbar.json" />
   </ItemGroup>
@@ -476,6 +474,10 @@
     <Compile Include="Migrations\201602110916447_baseline.cs" />
     <Compile Include="Migrations\201602110916447_baseline.Designer.cs">
       <DependentUpon>201602110916447_baseline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602112112526_v1.cs" />
+    <Compile Include="Migrations\201602112112526_v1.Designer.cs">
+      <DependentUpon>201602112112526_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -571,6 +573,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602110916447_baseline.resx">
       <DependentUpon>201602110916447_baseline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602112112526_v1.resx">
+      <DependentUpon>201602112112526_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

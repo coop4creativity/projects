@@ -29,8 +29,8 @@ namespace Cofaco.SGQ.Server.Framework.Data
             // Set the initializer for the database.
             //
 
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Configuration>()); 
-            //Database.SetInitializer<DataContext>(new DataContextInitializer(seedHandler));
+            // Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Configuration>()); 
+            Database.SetInitializer<DataContext>(new DataContextInitializer(seedHandler));
 
             //
             // Ensure the the DLL is copied to the target bin folder.
@@ -83,5 +83,7 @@ namespace Cofaco.SGQ.Server.Framework.Data
         //
 
         public static void Initialize(Action<object> seedHandler) { Create(seedHandler).Database.Initialize(true); }
+
+        // public static void Initialize(Action<object> seedHandler) { Create(seedHandler); }
     }
 }

@@ -1,42 +1,15 @@
 ﻿[
     {
-        "filename": "schema.product.json",
-        "entity": "Toolkit.CMS: Toolkit.CMS.Model.Cluster",
-        "service": "Toolkit.CMS: Toolkit.CMS.Api.Interface.ICluster",
+        "filename": "data.navbar.json",
+        "entity": "Toolkit.IMS: Toolkit.IMS.Model.Menu",
+        "service": "Toolkit.IMS: Toolkit.IMS.Api.Interface.IMenu",
         "method": {
-            "name": "Create",
-            "params": [ "Toolkit.CMS: Toolkit.CMS.Model.Cluster", "mscorlib: System.Object" ]
+            "name": "Update",
+            "params": [ "Toolkit.IMS: Toolkit.IMS.Model.Menu", "mscorlib: System.Object" ]
         }
     },
     {
-        "filename": "schema.process.json",
-        "entity": "Toolkit.CMS: Toolkit.CMS.Model.Cluster",
-        "service": "Toolkit.CMS: Toolkit.CMS.Api.Interface.ICluster",
-        "method": {
-            "name": "Create",
-            "params": [ "Toolkit.CMS: Toolkit.CMS.Model.Cluster", "mscorlib: System.Object" ]
-        }
-    },
-    {
-        "filename": "schema.audit.json",
-        "entity": "Toolkit.CMS: Toolkit.CMS.Model.Cluster",
-        "service": "Toolkit.CMS: Toolkit.CMS.Api.Interface.ICluster",
-        "method": {
-            "name": "Create",
-            "params": [ "Toolkit.CMS: Toolkit.CMS.Model.Cluster", "mscorlib: System.Object" ]
-        }
-    },
-    {
-        "filename": "schema.metadata.json",
-        "entity": "Toolkit.CMS: Toolkit.CMS.Model.Cluster",
-        "service": "Toolkit.CMS: Toolkit.CMS.Api.Interface.ICluster",
-        "method": {
-            "name": "Create",
-            "params": [ "Toolkit.CMS: Toolkit.CMS.Model.Cluster", "mscorlib: System.Object" ]
-        }
-    },
-    {
-        "filename": "data.users.json",
+        "filename": "data.user.json",
         "entity": "Cofaco.SGQ: Cofaco.SGQ.Server.Model.Users.User",
         "service": "Cofaco.SGQ: Cofaco.SGQ.Server.API.Users.IUser",
         "method": {
@@ -45,12 +18,12 @@
         }
     },
     {
-        "filename": "data.navbar.json",
-        "entity": "Toolkit.IMS: Toolkit.IMS.Model.Menu",
-        "service": "Toolkit.IMS: Toolkit.IMS.Api.Interface.IMenu",
+        "filename": "data.cluster.json",
+        "entity": "Toolkit.CMS: Toolkit.CMS.Model.Cluster",
+        "service": "Toolkit.CMS: Toolkit.CMS.Api.Interface.ICluster",
         "method": {
-            "name": "Update",
-            "params": [ "Toolkit.IMS: Toolkit.IMS.Model.Menu", "mscorlib: System.Object" ]
+            "name": "Create",
+            "params": [ "Toolkit.CMS: Toolkit.CMS.Model.Cluster", "mscorlib: System.Object" ]
         }
     }
 ]

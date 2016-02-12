@@ -5,17 +5,17 @@
             {
                 "name": "Produto",
                 "style": "link",
-                "url": "/entity/product"
+                "url": "/entity/__product"
             },
             {
                 "name": "Processo",
                 "style": "link",
-                "url": "/entity/process-entity"
+                "url": "/entity/__process"
             },
             {
                 "name": "Auditoria",
                 "style": "link",
-                "url": "/entity/audit-template"
+                "url": "/entity/__audit"
             },
             {
                 "name": "Relatórios",
