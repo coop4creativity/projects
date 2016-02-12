@@ -66,15 +66,18 @@
     var TYPE_NAME_NUMBER = 'NUMBER';
     var TYPE_NAME_DATE = 'DATETIME';
     var TYPE_NAME_SELECT = 'SELECT';
+    var TYPE_NAME_BOOL = 'BOOL';
+    var TYPE_NAME_PASSWORD = 'PASSWORD';
+
     var TYPE_NAME_SELECTWS = 'SELECT-WS';
     var TYPE_NAME_LIST = 'LIST';
-    var TYPE_NAME_PASSWORD = 'PASSWORD';
 
     var $FORM_GEN_TYPE = {};
     $FORM_GEN_TYPE[TYPE_NAME_TEXT] = _ui_generateTextInput;
     $FORM_GEN_TYPE[TYPE_NAME_TEXT_BLOCK] = _ui_generateTextBlockInput;
     $FORM_GEN_TYPE[TYPE_NAME_NUMBER] = _ui_generateNumberInput;
     $FORM_GEN_TYPE[TYPE_NAME_DATE] = _ui_generateDateInput;
+    $FORM_GEN_TYPE[TYPE_NAME_BOOL] = _ui_generateBoolInput;
     $FORM_GEN_TYPE[TYPE_NAME_SELECT] = _ui_generateSelectInput;
     $FORM_GEN_TYPE[TYPE_NAME_SELECTWS] = _ui_generateWsSelectInput;
     $FORM_GEN_TYPE[TYPE_NAME_LIST] = _ui_generateListInput;
@@ -348,6 +351,20 @@
         return html;
     }
 
+    function _ui_generateBoolInput(elm, formElementID, inputWrapperID, localInputID, displayName, labelClass, inputWrapperClass, visible, elementtExtraAttr) {
+
+        var html = '';
+
+        html += '<div id="' + formElementID + '" class="form-group has-feedback' + visible + '">';
+        html += /*  */'<label class="' + labelClass + 'control-label" for="' + localInputID + '">' + displayName + '</label>';
+        html += /*  */'<div id="' + inputWrapperID + '" class="' + inputWrapperClass + '">';
+        html += /*      */'<input id="' + localInputID + '" class="form-control" type="checkbox"' + elementtExtraAttr + '>';
+        html += /*  */'</div>';
+        html += '</div>';
+
+        return html;
+    }
+
     function _ui_generateNumberInput(elm, formElementID, inputWrapperID, localInputID, displayName, labelClass, inputWrapperClass, visible, elementtExtraAttr) {
 
         var html = '';
@@ -369,7 +386,7 @@
         html += '<div id="' + formElementID + '" class="form-group has-feedback' + visible + '">';
         html += /*  */'<label class="' + labelClass + 'control-label" for="' + localInputID + '">' + displayName + '</label>';
         html += /*  */'<div id="' + inputWrapperID + '" class="' + inputWrapperClass + '">';
-        html += /*      */'<input id="' + localInputID + '" class="form-control" type="datetime" ' + elementtExtraAttr + '>';
+        html += /*      */'<input id="' + localInputID + '" class="form-control" type="date" ' + elementtExtraAttr + '>';
         html += /*  */'</div>';
         html += '</div>';
 
@@ -495,6 +512,11 @@
                     }
                     break;
 
+                case 'BOOL':
+                    {
+                        dftValue = false;
+                    }
+                    break;
                 case 'NUMBER':
                     {
                         dftValue = 0;

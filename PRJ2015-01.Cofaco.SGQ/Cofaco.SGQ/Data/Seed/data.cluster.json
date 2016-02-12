@@ -99,7 +99,7 @@
                 "description": "Entity definition",
                 "api": {
                     "create": "cmsddl/entity-create",
-                    "detail": "/entity/{ID}",
+                    "detail": "entity/{ID}",
                     "list": "cmsddl/entity-list",
                     "update": "",
                     "delete": ""
@@ -542,6 +542,20 @@
                                 "editable": true
                             }
                         ]
+                    }
+                ],
+                "forms": [
+                    {
+                        "type": "CREATE",
+                        "url": "/entity/detail/CREATE/process"
+                    },
+                    {
+                        "type": "VIEW",
+                        "url": "/entity/{ID}"
+                    },
+                    {
+                        "type": "EDIT",
+                        "url": "/entity/detail/EDIT/{ID}"
                     }
                 ]
             },

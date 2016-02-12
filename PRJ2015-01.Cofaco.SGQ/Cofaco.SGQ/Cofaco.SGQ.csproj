@@ -319,6 +319,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\modules\toolkit\cms\entity.detail.html" />
+    <Content Include="Client\modules\toolkit\cms\entity.detail.js" />
     <Content Include="Client\startup.aspx" />
     <Content Include="Client\main\audit\form.edit.html" />
     <Content Include="Client\main\audit\form.edit.js" />

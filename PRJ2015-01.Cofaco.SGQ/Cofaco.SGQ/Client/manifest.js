@@ -106,6 +106,12 @@ var appSpec = {
             params: '/:ref/:config?',
             controller: 'tkEntityController'
         },
+        {
+            name: 'entity/detail',
+            template: '[CMS]:~/entity.detail.html',
+            params: '/:op/:ref?',
+            controller: 'tkEntityDetailController'
+        },
 
         //
         // AUDIT

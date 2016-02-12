@@ -36,7 +36,7 @@ namespace Cofaco.SGQ
             // Initialize the data model.
             //
 
-            DataContext.Initialize(Toolkit.Apps.Web.Framework.Context.Host.AppContext.Services.Get<ISeed>().Import);
+            // DataContext.Initialize(Toolkit.Apps.Web.Framework.Context.Host.AppContext.Services.Get<ISeed>().Import);
         }
     }
 }

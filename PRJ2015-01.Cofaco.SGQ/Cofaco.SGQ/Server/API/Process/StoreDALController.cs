@@ -50,7 +50,7 @@ namespace Cofaco.SGQ.Server.API.Process
         }
 
         [ActionName("delete")]
-        [HttpGet]
+        [HttpDelete]
         public IHttpActionResult Delete(string id, int key)
         {
             return Ok(Srv.Delete(id, key, Ctx));

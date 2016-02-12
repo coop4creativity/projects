@@ -23,7 +23,7 @@ namespace Cofaco.SGQ.Server.Model.Process
         // CONSTANTS
         //
 
-        private const string PROPERTY_NAME_ID = "ID";
+        private const string PROPERTY_NAME_ID = "Id";
         private const string PROPERTY_NAME_CREATED_DATE= "CreatedDate";
         private const string PROPERTY_NAME_MODIFIED_DATE = "ModifiedDate";
         private const string PROPERTY_NAME_CREATED_BY = "CreatedBy";

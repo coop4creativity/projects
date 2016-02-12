@@ -59,7 +59,7 @@ angular.module('toolkit.cms').controller('tkEntityController', [
         var _detail = function (item) {
 
             var url = _formGetUrl(_form.view);
-            $location.path(url.replace('{ID}', item.id));
+            $location.path(url.replace('{ID}', item.id).replace('{item.ID}', item.id).replace('{entity.ID}', $scope.entity.id));
         }
 
         var _create = function () {
@@ -67,7 +67,7 @@ angular.module('toolkit.cms').controller('tkEntityController', [
             if (_formHas(_form.create)) {
 
                 var url = _formGetUrl(_form.create);
-                $location.path(url);
+                $location.path(url.replace('{entity.ID}', $scope.entity.id));
 
             }
             else {
@@ -75,7 +75,7 @@ angular.module('toolkit.cms').controller('tkEntityController', [
 
                 if (toolkit.util.IsDefined(schema)) {
 
-                    var protocol = { 'create': dal.create($scope.entity.api.create) };
+                    var protocol = { 'create': dal.create($scope.entity.api.create.replace('{entity.ID}', $scope.entity.id)) };
 
                     var opt =
                         {
@@ -126,7 +126,7 @@ angular.module('toolkit.cms').controller('tkEntityController', [
             if (_formHas(_form.edit)) {
 
                 var url = _formGetUrl(_form.edit);
-                $location.path(url.replace('{ID}', item.id));
+                $location.path(url.replace('{ID}', item.id).replace('{item.ID}', item.id).replace('{entity.ID}', $scope.entity.id));
 
             }
             else {
@@ -134,7 +134,7 @@ angular.module('toolkit.cms').controller('tkEntityController', [
 
                 if (toolkit.util.IsDefined(schema)) {
 
-                    var protocol = { 'update': dal.create($scope.entity.api.update) };
+                    var protocol = { 'update': dal.create($scope.entity.api.update.replace('{ID}', item.id).replace('{item.ID}', item.id).replace('{entity.ID}', $scope.entity.id)) };
 
                     var opt =
                         {
@@ -159,7 +159,7 @@ angular.module('toolkit.cms').controller('tkEntityController', [
 
         var _delete = function (item) {
 
-            var protocol = { 'delete': dal.delete($scope.entity.api.delete) };
+            var protocol = { 'delete': dal.delete($scope.entity.api.delete.replace('{ID}', item.id).replace('{item.ID}', item.id).replace('{entity.ID}', $scope.entity.id)) };
 
             var opt =
                 {
@@ -168,7 +168,7 @@ angular.module('toolkit.cms').controller('tkEntityController', [
                     dimention: 'AUTO',
                     toolbar:
                         [
-                            { name: 'Remover', promise: function () { return protocol['delete'](item.id) }, native: 'close' },
+                            { name: 'Remover', promise: function () { return protocol['delete']() }, native: 'close' },
                             { name: 'Cancelar', native: 'close' }
                         ],
                     input: 'Tem a certeza que pretende eliminar este item \'' + item.id + '\' ?',
@@ -681,7 +681,7 @@ angular.module('toolkit.cms').controller('tkEntityController', [
                 toolkit.util.IsDefined($scope.entity.api) &&
                 toolkit.util.IsDefined($scope.entity.api.list)) {
 
-                dal.direct.list($scope.entity.api.list).then(function (list) { $scope.list = list; }, error.display);
+                dal.direct.list($scope.entity.api.list.replace('{entity.ID}', $scope.entity.id)).then(function (list) { $scope.list = list; }, error.display);
             }
             else {
 
